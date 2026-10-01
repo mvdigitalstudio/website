@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MV Digital Studios | Digital Marketing Agency</title>
+    <meta name="description" content="MV Digital Studios — modern digital marketing, branding, social media and growth solutions for ambitious brands.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Scroll Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+        :root {
+            --bg: #07090d;
+            --bg-soft: #0d1118;
+            --card: rgba(255,255,255,0.055);
+            --border: rgba(255,255,255,0.10);
+            --text: #f5f7fb;
+            --muted: #9aa4b2;
+            --accent: #8b5cf6;
+            --accent-2: #ec4899;
+            --accent-3: #22d3ee;
+            --white: #ffffff;
+            --shadow: 0 20px 60px rgba(0,0,0,0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(circle at 15% 15%, rgba(139,92,246,0.13), transparent 28%),
+                radial-gradient(circle at 85% 30%, rgba(236,72,153,0.10), transparent 28%),
+                radial-gradient(circle at 50% 85%, rgba(34,211,238,0.07), transparent 25%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           CUSTOM SCROLLBAR
+        ========================== */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #05070a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(
+                var(--accent),
+                var(--accent-2)
+            );
+            border-radius: 20px;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 18px 0;
+            transition: 0.35s ease;
+        }
+
+        header.scrolled {
+            background: rgba(7,9,13,0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* =========================
+           SVG LOGO
+        ========================== */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo svg {
+            width: 43px;
+            height: 43px;
+            flex-shrink: 0;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--muted);
+            margin-top: 1px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #d4d8df;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            height: 2px;
+            width: 0;
+            background: linear-gradient(
+                90deg,
+                var(--accent),
+                var(--accent-2)
+            );
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 11px 18px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 110px;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.045);
+            border-radius: 100px;
+            color: #d6d9e0;
+            font-size: 12px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(12px);
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            background: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 14px #34d399;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(48px, 6vw, 86px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            max-width: 780px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #ffffff 5%,
+                #c4b5fd 45%,
+                #f9a8d4 80%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            margin-top: 25px;
+            color: var(--muted);
+            max-width: 580px;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 13px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.35s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--accent),
+                var(--accent-2)
+            );
+            box-shadow: 0 12px 35px rgba(139,92,246,0.20);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 50px rgba(139,92,246,0.30);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.045);
+            border-color: rgba(255,255,255,0.10);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.09);
+            transform: translateY(-3px);
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 35px;
+            margin-top: 45px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 25px;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .meta-item span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================
+           HERO VISUAL
+        ========================== */
+
+        .visual-wrap {
+            position: relative;
+        }
+
+        .hero-image-card {
+            position: relative;
+            border-radius: 30px;
+            padding: 11px;
+            border: 1px solid rgba(255,255,255,0.13);
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.10),
+                rgba(255,255,255,0.02)
+            );
+            box-shadow: var(--shadow);
+            transform: rotate(2deg);
+        }
+
+        .hero-image {
+            height: 570px;
+            border-radius: 22px;
+            object-fit: cover;
+            width: 100%;
+            filter: saturate(0.85);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(12,15,22,0.85);
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(18px);
+            box-shadow: var(--shadow);
+            border-radius: 18px;
+        }
+
+        .floating-card.analytics {
+            left: -55px;
+            bottom: 65px;
+            padding: 18px;
+            width: 190px;
+        }
+
+        .floating-card.analytics small {
+            color: var(--muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.7px;
+        }
+
+        .growth-number {
+            font-size: 29px;
+            font-weight: 700;
+            margin: 5px 0;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .growth-up {
+            color: #34d399;
+            font-size: 11px;
+        }
+
+        .floating-card.client {
+            right: -35px;
+            top: 55px;
+            padding: 14px 17px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .client-avatar {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(
+                135deg,
+                var(--accent),
+                var(--accent-2)
+            );
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+
+        .client-info small {
+            color: var(--muted);
+            display: block;
+            font-size: 10px;
+        }
+
+        .client-info strong {
+            font-size: 12px;
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 55px;
+        }
+
+        .section-kicker {
+            color: #c4b5fd;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 13px;
+        }
+
+        .section-heading h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(36px, 5vw, 61px);
+            line-height: 1.03;
+            letter-spacing: -2px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin-top: 18px;
+            max-width: 630px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            min-height: 305px;
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.07),
+                    rgba(255,255,255,0.025)
+                );
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: -75px;
+            right: -75px;
+            background: radial-gradient(
+                circle,
+                rgba(139,92,246,0.32),
+                transparent 70%
+            );
+        }
+
+        .service-card:hover {
+            transform: translateY(-9px);
+            border-color: rgba(196,181,253,0.22);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.09);
+            margin-bottom: 27px;
+        }
+
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .service-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        /* =========================
+           ABOUT / STATS
+        ========================== */
+
+        .about-section {
+            background: rgba(255,255,255,0.018);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 28px;
+            height: 520px;
+            object-fit: cover;
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            line-height: 1.9;
+            margin-top: 20px;
+        }
+
+        .feature-list {
+            margin-top: 30px;
+            display: grid;
+            gap: 13px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .feature-check {
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            background: rgba(139,92,246,0.15);
+            border: 1px solid rgba(139,92,246,0.2);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .feature-check svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .feature span {
+            color: #d8dce4;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================== */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .process-item {
+            padding: 27px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 21px;
+        }
+
+        .process-number {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b6a3fd;
+            margin-bottom: 22px;
+        }
+
+        .process-item h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .process-item p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 20px;
+        }
+
+        .contact-info,
+        .contact-form {
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.065),
+                    rgba(255,255,255,0.02)
+                );
+            border-radius: 25px;
+        }
+
+        .contact-info {
+            padding: 35px;
+        }
+
+        .contact-info h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 29px;
+        }
+
+        .contact-info > p {
+            color: var(--muted);
+            margin-top: 13px;
+            line-height: 1.8;
+        }
+
+        .contact-detail {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .contact-detail span {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+        }
+
+        .contact-detail strong {
+            display: block;
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            padding: 35px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #c9ced7;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.09);
+            background: rgba(255,255,255,0.035);
+            color: white;
+            border-radius: 13px;
+            padding: 14px;
+            font-family: inherit;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: rgba(167,139,250,0.55);
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 0 0 4px rgba(139,92,246,0.08);
+        }
+
+        textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 0 40px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            color: #717988;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #898f9c;
+            font-size: 12px;
+            transition: 0.25s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* =========================
+           BACKGROUND BLOBS
+        ========================== */
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.16;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 330px;
+            height: 330px;
+            background: #8b5cf6;
+            left: -170px;
+            top: 20%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .orb-2 {
+            width: 280px;
+            height: 280px;
+            background: #ec4899;
+            right: -140px;
+            top: 8%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translate(0,0);
+            }
+            50% {
+                transform: translate(25px, -30px);
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu-toggle svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        @media (max-width: 950px) {
+
+            .hero-grid,
+            .about-grid,
+            .contact-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .hero-image {
+                height: 480px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .floating-card.analytics {
+                left: 15px;
+            }
+
+            .floating-card.client {
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 720px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 4%;
+                width: 92%;
+                padding: 20px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 17px;
+                background: rgba(10,13,18,0.95);
+                backdrop-filter: blur(18px);
+                border: 1px solid rgba(255,255,255,0.08);
+                border-radius: 18px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-cta {
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .services-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-meta {
+                gap: 22px;
+            }
+
+            section {
+                padding: 90px 0;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header id="header">
+        <div class="container nav">
+
+            <a href="#home" class="logo">
+
+                <!-- Embedded SVG Logo -->
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                    <defs>
+                        <linearGradient id="logoGradient"
+                            x1="10"
+                            y1="10"
+                            x2="90"
+                            y2="90">
+
+                            <stop offset="0%" stop-color="#8B5CF6"/>
+                            <stop offset="55%" stop-color="#EC4899"/>
+                            <stop offset="100%" stop-color="#22D3EE"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <rect
+                        x="4"
+                        y="4"
+                        width="92"
+                        height="92"
+                        rx="26"
+                        fill="#10141C"
+                        stroke="url(#logoGradient)"
+                        stroke-width="4"
+                    />
+
+                    <path
+                        d="M23 68V31L37 49L50 31V68"
+                        stroke="url(#logoGradient)"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M59 33H77M68 33V68"
+                        stroke="url(#logoGradient)"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+                <div class="logo-text">
+                    MV Digital Studios
+                    <span>Digital Growth Agency</span>
+                </div>
+
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6H20"/>
+                    <path d="M4 12H20"/>
+                    <path d="M4 18H20"/>
+                </svg>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+
+            <div class="container hero-grid">
+
+                <div data-aos="fade-up">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Your digital growth partner
+                    </div>
+
+                    <h1>
+                        We turn
+                        <span class="gradient-text">
+                            attention
+                        </span>
+                        into growth.
+                    </h1>
+
+                    <p class="hero-description">
+                        MV Digital Studios helps ambitious brands build visibility,
+                        create meaningful connections and turn digital platforms
+                        into measurable business growth.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#services" class="btn btn-primary">
+                            Explore Services →
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Let's Talk
+                        </a>
+
+                    </div>
+
+                    <div class="hero-meta">
+
+                        <div class="meta-item">
+                            <strong>50+</strong>
+                            <span>Projects Delivered</span>
+                        </div>
+
+                        <div class="meta-item">
+                            <strong>3x</strong>
+                            <span>Average Growth Focus</span>
+                        </div>
+
+                        <div class="meta-item">
+                            <strong>24/7</strong>
+                            <span>Creative Thinking</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="visual-wrap" data-aos="zoom-in" data-aos-delay="150">
+
+                    <div class="hero-image-card">
+
+                        <img
+                            class="hero-image"
+                            src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85"
+                            alt="Creative marketing team"
+                        >
+
+                    </div>
+
+                    <div class="floating-card analytics">
+
+                        <small>Campaign Growth</small>
+
+                        <div class="growth-number">
+                            +186%
+                        </div>
+
+                        <div class="growth-up">
+                            ↑ Engagement this quarter
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card client">
+
+                        <div class="client-avatar">
+                            MV
+                        </div>
+
+                        <div class="client-info">
+                            <small>Creative Direction</small>
+                            <strong>Always evolving.</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section id="services">
+
+            <div class="container">
+
+                <div class="section-heading" data-aos="fade-up">
+
+                    <div class="section-kicker">
+                        What We Do
+                    </div>
+
+                    <h2>
+                        Digital marketing,
+                        <span class="gradient-text">
+                            designed to perform.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Strategy, creativity and technology come together to build
+                        digital experiences that help brands stand out.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <!-- Service 1 -->
+                    <div class="service-card" data-aos="fade-up">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <path d="M4 19V5"/>
+                                <path d="M4 19H20"/>
+                                <path d="M7 15L11 11L14 13L20 7"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Digital Strategy
+                        </h3>
+
+                        <p>
+                            Data-backed strategies designed to clarify your
+                            positioning, audience and growth opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Service 2 -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <rect x="3" y="4" width="18" height="16" rx="3"/>
+                                <path d="M8 9H16"/>
+                                <path d="M8 13H13"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Social Media
+                        </h3>
+
+                        <p>
+                            Content systems that make brands more recognizable,
+                            engaging and relevant across social platforms.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Service 3 -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <path d="M4 17L10 11L14 15L20 8"/>
+                                <path d="M16 8H20V12"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Performance Marketing
+                        </h3>
+
+                        <p>
+                            Paid campaigns focused on discovering profitable
+                            audiences and improving measurable acquisition.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Service 4 -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <path d="M12 3L14.5 8.5L20 11L14.5 13.5L12 19L9.5 13.5L4 11L9.5 8.5L12 3Z"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Brand Identity
+                        </h3>
+
+                        <p>
+                            Visual identities and brand systems that create
+                            consistency, personality and memorability.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Service 5 -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <circle cx="12" cy="12" r="8"/>
+                                <path d="M12 8V12L15 14"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            SEO & Visibility
+                        </h3>
+
+                        <p>
+                            Search optimization that helps your brand become
+                            easier to discover and easier to trust.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Service 6 -->
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+
+                        <div class="service-icon">
+
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8">
+
+                                <path d="M4 4H20V16H4V4Z"/>
+                                <path d="M8 20H16"/>
+                                <path d="M12 16V20"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Creative Content
+                        </h3>
+
+                        <p>
+                            Scroll-stopping visuals, campaigns and creative
+                            concepts created to make people pay attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT / WHY US
+        ========================== -->
+
+        <section class="about-section">
+
+            <div class="container about-grid">
+
+                <div data-aos="fade-right">
+
+                    <img
+                        class="about-image"
+                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+                        alt="Modern creative studio"
+                    >
+
+                </div>
+
+
+                <div class="about-copy" data-aos="fade-left">
+
+                    <div class="section-kicker">
+                        Why MV Digital Studios
+                    </div>
+
+                    <h2 class="section-heading" style="margin-bottom:0;">
+
+                        Creative thinking.
+                        <span class="gradient-text">
+                            Business results.
+                        </span>
+
+                    </h2>
+
+                    <p>
+                        We believe great marketing starts with understanding
+                        people. We combine creative storytelling with strategy,
+                        research and performance data to build digital brands
+                        that matter.
+                    </p>
+
+                    <div class="feature-list">
+
+                        <div class="feature">
+
+                            <div class="feature-check">
+
+                                <svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3">
+
+                                    <path d="M5 12L10 17L19 7"/>
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                Strategy built around your business goals
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-check">
+
+                                <svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3">
+
+                                    <path d="M5 12L10 17L19 7"/>
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                Creative campaigns designed for attention
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-check">
+
+                                <svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3">
+
+                                    <path d="M5 12L10 17L19 7"/>
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                Transparent communication and reporting
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-check">
+
+                                <svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3">
+
+                                    <path d="M5 12L10 17L19 7"/>
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                Long-term thinking instead of short-term hacks
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROCESS
+        ========================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading" data-aos="fade-up">
+
+                    <div class="section-kicker">
+                        Our Process
+                    </div>
+
+                    <h2>
+                        From idea to
+                        <span class="gradient-text">
+                            impact.
+                        </span>
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-item" data-aos="fade-up">
+
+                        <div class="process-number">
+                            01 / DISCOVER
+                        </div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            We learn about your brand, customers, market and
+                            business objectives.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="process-number">
+                            02 / STRATEGIZE
+                        </div>
+
+                        <h3>
+                            Build The Plan
+                        </h3>
+
+                        <p>
+                            We turn insights into a clear strategy, campaign
+                            direction and creative roadmap.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="process-number">
+                            03 / CREATE
+                        </div>
+
+                        <h3>
+                            Make It Happen
+                        </h3>
+
+                        <p>
+                            Content, campaigns and digital experiences are
+                            created with precision and personality.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-item" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="process-number">
+                            04 / OPTIMIZE
+                        </div>
+
+                        <h3>
+                            Improve & Grow
+                        </h3>
+
+                        <p>
+                            We monitor performance, learn from the data and keep
+                            improving what works.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="section-heading" data-aos="fade-up">
+
+                    <div class="section-kicker">
+                        Let's Work Together
+                    </div>
+
+                    <h2>
+                        Have an idea?
+                        <span class="gradient-text">
+                            Let's build it.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Tell us a little about your project and we'll get back
+                        to you.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-wrap">
+
+                    <!-- Contact Info -->
+
+                    <div class="contact-info" data-aos="fade-right">
+
+                        <h3>
+                            Start a conversation.
+                        </h3>
+
+                        <p>
+                            Whether you're launching something new or looking
+                            to level up your digital presence, we'd love to
+                            hear what you're working on.
+                        </p>
+
+
+                        <div class="contact-detail">
+
+                            <span>Email</span>
+
+                            <strong>
+                                mvdigitalstudio6@gmail.com
+                            </strong>
+
+                        </div>
+
+
+                        <div class="contact-detail">
+
+                            <span>Available For</span>
+
+                            <strong>
+                                Brands • Startups • Creators • Businesses
+                            </strong>
+
+                        </div>
+
+
+                        <div class="contact-detail">
+
+                            <span>Response Time</span>
+
+                            <strong>
+                                Usually within 24–48 hours
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Form -->
+
+                    <div class="contact-form" data-aos="fade-left">
+
+                        <form id="contactForm">
+
+                            <div class="form-grid">
+
+                                <div class="form-group">
+
+                                    <label for="name">
+                                        Your Name
+                                    </label>
+
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        placeholder="John Doe"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email
+                                    </label>
+
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="john@example.com"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+                                    <label for="business">
+                                        Business / Brand
+                                    </label>
+
+                                    <input
+                                        id="business"
+                                        type="text"
+                                        placeholder="Your brand name"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+                                    <label for="message">
+                                        Tell us about your project
+                                    </label>
+
+                                    <textarea
+                                        id="message"
+                                        placeholder="What are you looking to achieve?"
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="btn btn-primary form-submit"
+                                type="submit"
+                            >
+                                Send Enquiry →
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="footer-copy">
+                © <span id="year"></span> MV Digital Studios. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+        /* =========================
+           INIT AOS
+        ========================== */
+
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 70
+        });
+
+
+        /* =========================
+           NAVBAR SCROLL EFFECT
+        ========================== */
+
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 40) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+
+        /* =========================
+           CONTACT FORM
+        ========================== */
+
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const button = contactForm.querySelector("button");
+
+            button.innerHTML = "Message Ready ✓";
+
+            setTimeout(() => {
+                button.innerHTML = "Send Enquiry →";
+            }, 2500);
+
+            alert(
+                "Thank you! Your enquiry has been received.\n\n" +
+                "Connect this form to Formspree, EmailJS, Netlify Forms, or your own backend to receive real submissions."
+            );
+
+            contactForm.reset();
+
+        });
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        /* =========================
+           SUBTLE MOUSE PARALLAX
+        ========================== */
+
+        const heroVisual =
+            document.querySelector(".hero-image-card");
+
+        document.addEventListener("mousemove", (event) => {
+
+            if (!heroVisual) return;
+
+            const x =
+                (window.innerWidth / 2 - event.clientX) / 90;
+
+            const y =
+                (window.innerHeight / 2 - event.clientY) / 90;
+
+            heroVisual.style.transform =
+                `rotate(${2 + x * 0.08}deg)
+                 translate(${x * 0.15}px, ${y * 0.15}px)`;
+
+        });
+
+    </script>
+
+</body>
+</html>
