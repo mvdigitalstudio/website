@@ -1,45 +1,2401 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — MV Digital Studios</title>
-<meta name="description" content="Explore MV Digital Studios services: SEO, social media marketing, performance marketing, creative content, AI video creation, graphic design and website development.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#06070b;--text:#f6f7fb;--muted:#9298a8;--line:rgba(255,255,255,.11);--violet:#8b5cf6;--pink:#ec4899;--cyan:#22d3ee;--max:1240px}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}a{text-decoration:none;color:inherit}.ambient{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(circle at 52% 12%,rgba(139,92,246,.12),transparent 38%),#06070b}.ambient:before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg at 52% 45%,rgba(139,92,246,.06),transparent 17%,rgba(236,72,153,.05),transparent 42%,rgba(34,211,238,.05),transparent 63%,rgba(139,92,246,.06));filter:blur(22px)}.grid{position:absolute;inset:-12%;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:90px 90px;transform:perspective(900px) rotateX(62deg) translateY(30%);mask-image:linear-gradient(to bottom,transparent,#000 16%,#000 80%,transparent)}#canvas{position:absolute;inset:0;width:100%;height:100%}.cursor{position:fixed;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.11),rgba(34,211,238,.03) 34%,transparent 70%);z-index:1;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:screen}.site{position:relative;z-index:2}.container{width:min(calc(100% - 48px),var(--max));margin:auto}nav{height:90px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.brand svg{width:44px;height:44px}.brand-copy strong{display:block;font:600 15px "Space Grotesk"}.brand-copy span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#747b8a;margin-top:5px}.nav-links{display:flex;gap:36px;list-style:none}.nav-links a{font-size:13px;color:#aeb3c0}.nav-links a:hover,.nav-links a.active{color:#fff}.menu{display:none;border:0;background:none;color:white;font-size:25px}
-.hero{min-height:84vh;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:50px;padding:70px 0}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#767d8d;margin-bottom:22px}.hero h1{font:500 clamp(55px,8vw,112px)/.88 "Space Grotesk";letter-spacing:-.06em}.grad{background:linear-gradient(110deg,#fff,#cabaff 44%,#ef9fcf 72%,#9fe6ee);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:550px;color:#8d94a4;line-height:1.75;font-size:16px;margin-top:28px}.service-stage{position:relative;height:620px}.stage-frame{position:absolute;inset:6% 0 6% 8%;border:1px solid rgba(255,255,255,.12);background:linear-gradient(140deg,rgba(255,255,255,.045),rgba(255,255,255,.008));overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.34)}.stage-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 49.7%,rgba(255,255,255,.06) 50%,transparent 50.3%),linear-gradient(90deg,transparent 49.7%,rgba(255,255,255,.06) 50%,transparent 50.3%);background-size:100% 42px,42px 100%;opacity:.32}.stage-word{position:absolute;left:7%;bottom:4%;font:600 clamp(70px,12vw,180px)/.8 "Space Grotesk";letter-spacing:-.09em;color:rgba(255,255,255,.038)}.stage-circle{position:absolute;width:48%;aspect-ratio:1;border-radius:50%;left:25%;top:23%;border:1px solid rgba(139,92,246,.24);box-shadow:0 0 80px rgba(139,92,246,.08)}.stage-circle:before,.stage-circle:after{content:"";position:absolute;border-radius:50%;inset:16%;border:1px dashed rgba(255,255,255,.10)}.stage-circle:after{inset:31%;border-style:solid;border-color:rgba(34,211,238,.16)}.stage-dot{position:absolute;width:11px;height:11px;border-radius:50%;background:white;box-shadow:0 0 22px white;left:72%;top:16%}.stage-dot.pink{left:15%;top:60%;background:var(--pink);box-shadow:0 0 22px rgba(236,72,153,.85)}.stage-dot.cyan{left:74%;top:73%;background:var(--cyan);box-shadow:0 0 22px rgba(34,211,238,.85)}.stage-label{position:absolute;border:1px solid rgba(255,255,255,.10);background:rgba(7,8,13,.72);backdrop-filter:blur(14px);padding:11px 13px;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#9ba1b0}.sl-a{left:3%;top:16%}.sl-b{right:3%;top:38%}.sl-c{left:8%;bottom:17%}.sl-d{right:8%;bottom:7%}
-.service-section{padding:95px 0}.service-row{min-height:440px;border-top:1px solid var(--line);display:grid;grid-template-columns:90px 1fr .9fr;gap:35px;align-items:center;position:relative;overflow:hidden}.service-row:last-child{border-bottom:1px solid var(--line)}.service-row:before{content:"";position:absolute;inset:0 -20px;background:linear-gradient(100deg,rgba(139,92,246,.04),rgba(236,72,153,.05),rgba(34,211,238,.025));transform:translateX(-102%);transition:transform .7s cubic-bezier(.16,1,.3,1)}.service-row:hover:before{transform:translateX(0)}.service-row>*{position:relative;z-index:1}.index{align-self:start;padding-top:34px;color:#666d7c;font:500 12px "Space Grotesk"}.service-title h2{font:500 clamp(42px,5vw,74px)/.93 "Space Grotesk";letter-spacing:-.055em;max-width:660px}.service-title p{color:#868c9c;line-height:1.7;max-width:580px;margin-top:20px}.service-detail{align-self:stretch;display:flex;align-items:center}.detail-box{width:100%;padding:24px;border:1px solid var(--line);background:rgba(255,255,255,.025);position:relative;overflow:hidden}.detail-box:after{content:"";position:absolute;left:-35%;top:0;width:30%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:skewX(-20deg);animation:sweep 4.8s linear infinite}@keyframes sweep{to{left:130%}}.detail-box h3{font:500 18px "Space Grotesk";margin-bottom:15px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:9px 11px;border:1px solid rgba(255,255,255,.08);font-size:10px;color:#7e8593}.signal-visual{margin-top:24px;height:120px;position:relative;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden}.signal-line{position:absolute;left:0;right:0;height:1px;top:58%;background:linear-gradient(90deg,transparent,var(--violet),var(--cyan),transparent);box-shadow:0 0 20px rgba(139,92,246,.4);animation:signal 2.7s ease-in-out infinite}@keyframes signal{0%,100%{transform:translateX(-30%);opacity:.25}50%{transform:translateX(30%);opacity:1}}.signal-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.04) 50%,transparent 100%);animation:shine 3.5s linear infinite}@keyframes shine{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
-.band{padding:35px 0;border-block:1px solid var(--line);overflow:hidden}.band-track{display:flex;gap:55px;width:max-content;font:500 14px "Space Grotesk";text-transform:uppercase;letter-spacing:.1em;color:#7c8291}.band-track span:after{content:" / ";margin-left:55px;color:#454a57}
-.capabilities{padding:115px 0}.cap-head{display:grid;grid-template-columns:1fr .8fr;gap:80px;align-items:end;margin-bottom:55px}.cap-head h2{font:500 clamp(42px,5vw,72px)/.95 "Space Grotesk";letter-spacing:-.05em}.cap-head p{color:#868c9b;line-height:1.75}.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.cap{min-height:290px;border:1px solid var(--line);padding:25px;background:linear-gradient(140deg,rgba(255,255,255,.04),rgba(255,255,255,.012));position:relative;overflow:hidden}.cap:nth-child(3){grid-column:1/-1;min-height:240px}.cap h3{font:500 26px "Space Grotesk"}.cap p{max-width:490px;color:#777e8d;line-height:1.7;font-size:13px;margin-top:12px}.cap-visual{position:absolute;right:25px;bottom:23px;width:190px;height:110px;border:1px solid rgba(255,255,255,.09)}.cap-visual i{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px rgba(34,211,238,.7);animation:pulse 2.2s ease-in-out infinite}.cap-visual i:nth-child(1){left:24%;top:60%}.cap-visual i:nth-child(2){left:48%;top:38%;background:var(--pink);animation-delay:.45s}.cap-visual i:nth-child(3){left:75%;top:67%;background:var(--violet);animation-delay:.9s}.cap-visual:after{content:"";position:absolute;left:14%;right:14%;top:52%;height:1px;background:linear-gradient(90deg,var(--violet),var(--pink),var(--cyan));transform:rotate(-8deg)}@keyframes pulse{0%,100%{transform:scale(.65);opacity:.4}50%{transform:scale(1.4);opacity:1}}
-.cta{padding:100px 0 145px;text-align:center}.cta h2{font:500 clamp(50px,7vw,94px)/.92 "Space Grotesk";letter-spacing:-.06em;max-width:900px;margin:auto}.cta p{color:#858b9b;max-width:560px;line-height:1.7;margin:24px auto 30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;border:1px solid var(--line);border-radius:999px;font-size:13px}.btn.primary{background:#f4f5f8;color:#08090d;border-color:#f4f5f8}.footer{border-top:1px solid var(--line);padding:25px 0 40px;display:flex;justify-content:space-between;color:#666d7c;font-size:11px}.footer a:hover{color:#fff}.reveal{opacity:0;transform:translateY(42px)}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.service-stage{height:520px}.service-row{grid-template-columns:60px 1fr}.service-detail{grid-column:2}.cap-head{grid-template-columns:1fr;gap:24px}.cap-grid{grid-template-columns:1fr}.cap:nth-child(3){grid-column:auto}}
-@media(max-width:700px){.container{width:min(calc(100% - 30px),var(--max))}.nav-links{display:none;position:absolute;right:15px;top:78px;z-index:20;width:210px;flex-direction:column;gap:18px;padding:20px;background:rgba(8,9,14,.96);border:1px solid var(--line);border-radius:14px}.nav-links.show{display:flex}.menu{display:block}.brand-copy span{display:none}.hero{padding:55px 0 40px}.hero h1{font-size:56px}.service-stage{height:410px}.stage-frame{inset:4% 0 4% 0}.stage-word{font-size:78px}.service-row{min-height:540px;grid-template-columns:42px 1fr;gap:18px}.service-title h2{font-size:43px}.service-detail{grid-column:2}.detail-box{padding:19px}.cap-visual{width:135px}.footer{display:block}.footer>div+div{margin-top:10px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}.cursor{display:none}}
-</style>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Services | MV Digital Studios
+    </title>
+
+    <meta
+        name="description"
+        content="Explore SEO, social media marketing, performance marketing, AI video creation, graphic design and website development services from MV Digital Studios."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #06070b;
+            color: #fff;
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        :root {
+            --line: rgba(255,255,255,0.10);
+            --muted: #9399a8;
+            --violet: #8b5cf6;
+            --pink: #ec4899;
+            --cyan: #22d3ee;
+        }
+
+        /* =========================================
+           BACKGROUND
+        ========================================== */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(139,92,246,0.14),
+                    transparent 40%
+                ),
+                #06070b;
+        }
+
+        .background::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+
+            background:
+                radial-gradient(
+                    circle at 10% 30%,
+                    rgba(34,211,238,0.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(236,72,153,0.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 50% 80%,
+                    rgba(139,92,246,0.08),
+                    transparent 25%
+                );
+
+            filter: blur(50px);
+
+            animation:
+                servicesAmbient 12s
+                ease-in-out
+                infinite
+                alternate;
+        }
+
+        @keyframes servicesAmbient {
+
+            from {
+                transform:
+                    translate(-2%, -2%)
+                    scale(1);
+            }
+
+            to {
+                transform:
+                    translate(2%, 2%)
+                    scale(1.10);
+            }
+
+        }
+
+        .grid {
+
+            position: absolute;
+
+            inset: -20%;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.045) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                75px 75px;
+
+            transform:
+                perspective(700px)
+                rotateX(58deg)
+                translateY(25%);
+
+            opacity: 0.25;
+
+        }
+
+        #networkCanvas {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .mouse-glow {
+
+            position: fixed;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,0.10),
+                    transparent 70%
+                );
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: -1;
+
+        }
+
+        /* =========================================
+           LAYOUT
+        ========================================== */
+
+        .container {
+
+            width:
+                min(
+                    calc(100% - 48px),
+                    1240px
+                );
+
+            margin:
+                auto;
+
+        }
+
+        /* =========================================
+           NAVIGATION
+        ========================================== */
+
+        nav {
+
+            height: 90px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            border-bottom:
+                1px solid
+                var(--line);
+
+        }
+
+        .brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+        }
+
+        .brand svg {
+
+            width:
+                46px;
+
+            height:
+                46px;
+
+        }
+
+        .brand strong {
+
+            display:
+                block;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                15px;
+
+        }
+
+        .brand span {
+
+            display:
+                block;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                .13em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #747a8b;
+
+            margin-top:
+                5px;
+
+        }
+
+        .nav-links {
+
+            list-style:
+                none;
+
+            display:
+                flex;
+
+            gap:
+                34px;
+
+        }
+
+        .nav-links a {
+
+            font-size:
+                13px;
+
+            color:
+                #aeb3c0;
+
+            transition:
+                .3s;
+
+        }
+
+        .nav-links a:hover {
+
+            color:
+                #fff;
+
+        }
+
+        .menu {
+
+            display:
+                none;
+
+            background:
+                none;
+
+            border:
+                none;
+
+            color:
+                white;
+
+            font-size:
+                26px;
+
+        }
+
+        /* =========================================
+           HERO
+        ========================================== */
+
+        .hero {
+
+            min-height:
+                88vh;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.1fr
+                .9fr;
+
+            align-items:
+                center;
+
+            gap:
+                60px;
+
+            position:
+                relative;
+
+        }
+
+        .eyebrow {
+
+            font-size:
+                11px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .23em;
+
+            color:
+                #8d93a3;
+
+            margin-bottom:
+                24px;
+
+        }
+
+        h1 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    58px,
+                    8vw,
+                    110px
+                );
+
+            line-height:
+                .90;
+
+            letter-spacing:
+                -.06em;
+
+            font-weight:
+                600;
+
+        }
+
+        .gradient-text {
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #fff,
+                    #c7baff 40%,
+                    #f1a6d1 70%,
+                    #a4e8ee
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+        .hero-copy {
+
+            color:
+                var(--muted);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.75;
+
+            max-width:
+                560px;
+
+            margin-top:
+                28px;
+
+        }
+
+        /* =========================================
+           SERVICE VISUAL
+        ========================================== */
+
+        .service-visual {
+
+            position:
+                relative;
+
+            height:
+                540px;
+
+        }
+
+        .visual-box {
+
+            position:
+                absolute;
+
+            inset:
+                8%;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            border-radius:
+                28px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            backdrop-filter:
+                blur(14px);
+
+            overflow:
+                hidden;
+
+        }
+
+        .visual-box::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                420px;
+
+            height:
+                420px;
+
+            border-radius:
+                50%;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,.15),
+                    transparent 65%
+                );
+
+            animation:
+                pulseVisual 5s
+                ease-in-out
+                infinite
+                alternate;
+
+        }
+
+        @keyframes pulseVisual {
+
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    scale(.85);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    scale(1.15);
+            }
+
+        }
+
+        .visual-line {
+
+            position:
+                absolute;
+
+            width:
+                70%;
+
+            height:
+                1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,255,255,.35),
+                    transparent
+                );
+
+            top:
+                25%;
+
+            left:
+                15%;
+
+            animation:
+                moveLine 4s
+                ease-in-out
+                infinite;
+
+        }
+
+        .visual-line.two {
+
+            top:
+                50%;
+
+            animation-delay:
+                1.5s;
+
+        }
+
+        .visual-line.three {
+
+            top:
+                75%;
+
+            animation-delay:
+                3s;
+
+        }
+
+        @keyframes moveLine {
+
+            0%,
+            100% {
+                transform:
+                    scaleX(.5);
+
+                opacity:
+                    .20;
+            }
+
+            50% {
+                transform:
+                    scaleX(1);
+
+                opacity:
+                    .65;
+            }
+
+        }
+
+        .service-orbit {
+
+            position:
+                absolute;
+
+            width:
+                230px;
+
+            height:
+                230px;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border:
+                1px solid
+                rgba(139,92,246,.30);
+
+            border-radius:
+                50%;
+
+            animation:
+                rotateService
+                16s
+                linear
+                infinite;
+
+        }
+
+        .service-orbit::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                10px;
+
+            height:
+                10px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--pink);
+
+            box-shadow:
+                0 0 20px
+                rgba(236,72,153,.8);
+
+            right:
+                10px;
+
+            top:
+                50%;
+
+        }
+
+        @keyframes rotateService {
+
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(0);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(360deg);
+            }
+
+        }
+
+        .service-core {
+
+            position:
+                absolute;
+
+            width:
+                120px;
+
+            height:
+                120px;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius:
+                50%;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                30px;
+
+            font-weight:
+                600;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #25233a,
+                    #090a0f
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,.13);
+
+            box-shadow:
+                0 0 80px
+                rgba(139,92,246,.16);
+
+        }
+
+        .visual-tag {
+
+            position:
+                absolute;
+
+            padding:
+                10px
+                13px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            background:
+                rgba(7,8,13,.70);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-radius:
+                999px;
+
+            font-size:
+                10px;
+
+            color:
+                #b0b5c3;
+
+        }
+
+        .tag-one {
+            top:
+                14%;
+            left:
+                8%;
+        }
+
+        .tag-two {
+            top:
+                20%;
+            right:
+                7%;
+        }
+
+        .tag-three {
+            bottom:
+                18%;
+            left:
+                8%;
+        }
+
+        .tag-four {
+            bottom:
+                12%;
+            right:
+                8%;
+        }
+
+        /* =========================================
+           SERVICES LIST
+        ========================================== */
+
+        .services-section {
+
+            padding:
+                120px
+                0;
+
+        }
+
+        .section-intro {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap:
+                40px;
+
+            margin-bottom:
+                60px;
+
+        }
+
+        .section-intro h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-weight:
+                500;
+
+            font-size:
+                clamp(
+                    42px,
+                    6vw,
+                    78px
+                );
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.05em;
+
+            max-width:
+                760px;
+
+        }
+
+        .section-intro p {
+
+            max-width:
+                390px;
+
+            color:
+                #878d9c;
+
+            line-height:
+                1.75;
+
+            font-size:
+                14px;
+
+        }
+
+        .service-card {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                100px
+                1fr
+                170px;
+
+            gap:
+                30px;
+
+            padding:
+                45px
+                0;
+
+            border-top:
+                1px solid
+                var(--line);
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+        .service-card:last-child {
+
+            border-bottom:
+                1px solid
+                var(--line);
+
+        }
+
+        .service-card::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                220px;
+
+            height:
+                220px;
+
+            border-radius:
+                50%;
+
+            right:
+                -110px;
+
+            bottom:
+                -120px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,.15),
+                    transparent 70%
+                );
+
+            opacity:
+                0;
+
+            transition:
+                .5s;
+
+        }
+
+        .service-card:hover::after {
+
+            opacity:
+                1;
+
+        }
+
+        .service-index {
+
+            color:
+                #626879;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                12px;
+
+        }
+
+        .service-card h3 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    30px,
+                    4.5vw,
+                    62px
+                );
+
+            font-weight:
+                500;
+
+            letter-spacing:
+                -.04em;
+
+        }
+
+        .service-card p {
+
+            color:
+                #858b9a;
+
+            line-height:
+                1.75;
+
+            max-width:
+                700px;
+
+            margin-top:
+                12px;
+
+        }
+
+        .service-list-small {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                8px;
+
+            margin-top:
+                22px;
+
+        }
+
+        .service-list-small span {
+
+            border:
+                1px solid
+                rgba(255,255,255,.09);
+
+            padding:
+                8px
+                11px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                10px;
+
+            color:
+                #8e94a2;
+
+        }
+
+        .service-visual-number {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                80px;
+
+            color:
+                rgba(255,255,255,.05);
+
+            align-self:
+                center;
+
+            text-align:
+                right;
+
+        }
+
+        /* =========================================
+           CTA
+        ========================================== */
+
+        .cta {
+
+            padding:
+                150px
+                0;
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid
+                var(--line);
+
+        }
+
+        .cta h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    42px,
+                    7vw,
+                    90px
+                );
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.06em;
+
+            max-width:
+                950px;
+
+            margin:
+                0
+                auto
+                25px;
+
+        }
+
+        .cta p {
+
+            max-width:
+                580px;
+
+            margin:
+                0
+                auto
+                30px;
+
+            color:
+                #858b9b;
+
+            line-height:
+                1.8;
+
+        }
+
+        .button {
+
+            display:
+                inline-flex;
+
+            gap:
+                10px;
+
+            padding:
+                15px
+                22px;
+
+            border:
+                1px solid
+                #f5f5f7;
+
+            border-radius:
+                999px;
+
+            color:
+                #07080d;
+
+            background:
+                #f5f5f7;
+
+            font-size:
+                13px;
+
+        }
+
+        footer {
+
+            border-top:
+                1px solid
+                var(--line);
+
+            padding:
+                30px
+                0;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            color:
+                #747a8a;
+
+            font-size:
+                12px;
+
+        }
+
+        @media (max-width: 900px) {
+
+            .hero {
+
+                grid-template-columns:
+                    1fr;
+
+                padding:
+                    80px
+                    0;
+
+            }
+
+            .section-intro {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
+            .service-card {
+
+                grid-template-columns:
+                    55px
+                    1fr;
+
+            }
+
+            .service-visual-number {
+
+                display:
+                    none;
+
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    calc(100% - 30px);
+
+            }
+
+            nav {
+
+                height:
+                    76px;
+
+            }
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                top:
+                    76px;
+
+                background:
+                    rgba(6,7,11,.97);
+
+                padding:
+                    25px;
+
+                flex-direction:
+                    column;
+
+                border-bottom:
+                    1px solid
+                    var(--line);
+
+            }
+
+            .nav-links.show {
+
+                display:
+                    flex;
+
+            }
+
+            .menu {
+
+                display:
+                    block;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<div class="ambient"><canvas id="canvas"></canvas><div class="grid" id="grid"></div></div><div class="cursor" id="cursor"></div>
-<div class="site"><header class="container"><nav><a class="brand" href="index.html"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="8" y1="8" x2="92" y2="92"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="55%" stop-color="#EC4899"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs><rect x="5" y="5" width="90" height="90" rx="25" fill="#0E1018" stroke="url(#g)" stroke-width="3.5"/><path d="M21 68V33L34 49L47 33V68" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M55 33L66 68L80 33" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="brand-copy"><strong>MV Digital Studios</strong><span>Digital Growth &amp; Creative Studio</span></div></a><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a class="active" href="services.html">Services</a></li><li><a href="contact.html">Contact Us</a></li></ul><button class="menu" id="menu">☰</button></nav></header>
-<main>
-<section class="container hero"><div><div class="eyebrow hero-in">What we do / service system / 02</div><h1 class="hero-in">Built to make <span class="grad">digital</span> feel alive.</h1><p class="hero-in">From search strategy to social storytelling, AI video, graphic design and websites — every service is designed to strengthen the whole brand.</p><a class="btn primary hero-in magnetic" href="contact.html">Tell us what you need <span>↗</span></a></div><div class="service-stage"><div class="stage-frame" id="stageFrame"><div class="stage-circle"><div class="stage-dot"></div><div class="stage-dot pink"></div><div class="stage-dot cyan"></div></div><div class="stage-label sl-a">SEARCH / DISCOVER</div><div class="stage-label sl-b">SOCIAL / ATTENTION</div><div class="stage-label sl-c">CREATIVE / STORY</div><div class="stage-label sl-d">WEB / EXPERIENCE</div><div class="stage-word">SYSTEM</div></div></div></section>
-<div class="band"><div class="band-track" id="bandTrack"><span>SEO</span><span>SOCIAL MEDIA</span><span>PERFORMANCE</span><span>VIDEO</span><span>GRAPHIC DESIGN</span><span>AI CREATION</span><span>WEB DEVELOPMENT</span><span>SEO</span><span>SOCIAL MEDIA</span></div></div>
-<section class="container service-section">
-<article class="service-row reveal"><div class="index">01</div><div class="service-title"><h2>Search &amp; SEO</h2><p>Build a search presence that is useful to people and visible where it matters. We work across on-page structure, content direction, local intent and ongoing optimization.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">On-page SEO</span><span class="tag">Local SEO</span><span class="tag">Keyword strategy</span><span class="tag">Content structure</span><span class="tag">Technical direction</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-<article class="service-row reveal"><div class="index">02</div><div class="service-title"><h2>Social Media Marketing</h2><p>Turn attention into a recognizable presence with platform-native content, campaign direction, community thinking and a consistent visual language.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">Content calendars</span><span class="tag">Creative concepts</span><span class="tag">Reels</span><span class="tag">Campaigns</span><span class="tag">Brand voice</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-<article class="service-row reveal"><div class="index">03</div><div class="service-title"><h2>Performance Marketing</h2><p>Make paid media more intentional with focused messaging, creative testing and landing-page journeys designed around the action you want.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">Campaign strategy</span><span class="tag">Ad creative</span><span class="tag">Audience direction</span><span class="tag">Landing journeys</span><span class="tag">Iteration</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-<article class="service-row reveal"><div class="index">04</div><div class="service-title"><h2>Video Editing &amp; Graphic Design</h2><p>Shape raw ideas into polished visual communication — short-form edits, campaign assets, brand graphics and content systems built to move quickly.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">Video editing</span><span class="tag">Motion graphics</span><span class="tag">Social creatives</span><span class="tag">Ad design</span><span class="tag">Brand assets</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-<article class="service-row reveal"><div class="index">05</div><div class="service-title"><h2>AI Video Creation</h2><p>Build story-led AI video concepts with a strong visual identity, cinematic direction and a repeatable production workflow.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">Story development</span><span class="tag">AI scenes</span><span class="tag">Character consistency</span><span class="tag">Visual direction</span><span class="tag">Short-form video</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-<article class="service-row reveal"><div class="index">06</div><div class="service-title"><h2>Website Development</h2><p>Design and build modern web experiences that communicate clearly, feel premium and give your audience a strong next step.</p></div><div class="service-detail"><div class="detail-box"><h3>Core focus</h3><div class="tags"><span class="tag">Landing pages</span><span class="tag">Business websites</span><span class="tag">UX/UI</span><span class="tag">Responsive design</span><span class="tag">Conversion paths</span></div><div class="signal-visual"><div class="signal-line"></div></div></div></div></article>
-</section>
-<section class="container capabilities"><div class="cap-head reveal"><h2>One studio. Different ways to create momentum.</h2><p>Services can stand alone, but the strongest work happens when they connect. A new website can launch with a social system. An SEO strategy can feed a content engine. A campaign can become a story.</p></div><div class="cap-grid"><article class="cap reveal"><h3>Brand + Content</h3><p>Make the visual and verbal system feel unmistakably yours.</p><div class="cap-visual"><i></i><i></i><i></i></div></article><article class="cap reveal"><h3>Growth + Performance</h3><p>Turn attention into measurable next steps without losing the creative edge.</p><div class="cap-visual"><i></i><i></i><i></i></div></article><article class="cap reveal"><h3>Digital + Technology</h3><p>Connect the story to a modern experience that works beautifully across screens.</p><div class="cap-visual"><i></i><i></i><i></i></div></article></div></section>
-<section class="cta"><div class="container"><div class="eyebrow reveal">Have a brief?</div><h2 class="reveal">Bring us the problem. We’ll bring the system.</h2><p class="reveal">Start with the challenge, the idea or just the direction. We can shape the rest together.</p><a class="btn primary magnetic reveal" href="contact.html">Start a conversation <span>↗</span></a></div></section>
-</main><footer class="container footer"><div>© 2026 MV Digital Studios</div><div><a href="mailto:mvdigitalstudio6@gmail.com">mvdigitalstudio6@gmail.com</a></div></footer></div>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
-<script>
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)]; q('#menu')?.addEventListener('click',()=>q('#navLinks').classList.toggle('show'));qa('.nav-links a').forEach(a=>a.addEventListener('click',()=>q('#navLinks').classList.remove('show')));
-const cv=q('#canvas'),c=cv.getContext('2d');let w,h,pts=[];function rs(){w=innerWidth;h=innerHeight;const d=Math.min(devicePixelRatio||1,2);cv.width=w*d;cv.height=h*d;c.setTransform(d,0,0,d,0,0);pts=Array.from({length:Math.min(82,Math.floor(w/15))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.24,r:Math.random()*1.25+.25,a:Math.random()*6.28}));}rs();addEventListener('resize',rs);function loop(){c.clearRect(0,0,w,h);if(!reduced){for(const p of pts){p.x+=p.vx;p.y+=p.vy;p.a+=.012;if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;c.beginPath();c.arc(p.x,p.y,p.r+Math.sin(p.a)*.25,0,7);c.fillStyle='rgba(235,238,255,.24)';c.fill()}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<150){c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.strokeStyle=`rgba(130,130,185,${(1-d/150)*.09})`;c.stroke()}}}requestAnimationFrame(loop)}loop();
-if(!reduced){gsap.registerPlugin(ScrollTrigger);gsap.timeline().from('.hero-in',{opacity:0,y:36,duration:1,stagger:.12,ease:'power3.out'}).from('.stage-frame',{opacity:0,scale:.88,rotateY:10,duration:1.25,ease:'power3.out'},'-=.75');
-qa('.reveal').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 83%',once:true}})); gsap.to('#grid',{yPercent:20,rotation:2,scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:1}});gsap.to('.stage-circle',{rotation:210,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.4}});gsap.to('.stage-frame',{yPercent:-8,rotateX:4,scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});gsap.to('#bandTrack',{x:-520,scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:1}});qa('.stage-label').forEach((el,i)=>gsap.to(el,{x:i%2?12:-12,y:i%2?-8:9,duration:2.8+i*.25,repeat:-1,yoyo:true,ease:'sine.inOut'}));const cursor=q('#cursor');addEventListener('pointermove',e=>gsap.to(cursor,{x:e.clientX,y:e.clientY,duration:.55,ease:'power2.out'}));qa('.magnetic').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-(r.left+r.width/2))*.12,y:(e.clientY-(r.top+r.height/2))*.12,duration:.25})});b.addEventListener('pointerleave',()=>gsap.to(b,{x:0,y:0,duration:.5,ease:'elastic.out(1,.45)'}));});qa('.service-row').forEach((row,i)=>row.addEventListener('mouseenter',()=>{gsap.to(row.querySelector('.detail-box'),{y:-7,scale:1.015,duration:.35,ease:'power2.out'});gsap.to(row.querySelector('.index'),{color:i%3===0?'#bfaeff':i%3===1?'#efacd1':'#9be8f2',duration:.25})}));qa('.service-row').forEach((row,i)=>row.addEventListener('mouseleave',()=>gsap.to(row.querySelector('.detail-box'),{y:0,scale:1,duration:.35})));}
-</script>
-</body></html>
+
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <canvas id="networkCanvas"></canvas>
+
+    </div>
+
+
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+
+    <div class="container">
+
+        <nav>
+
+
+            <a href="index.html" class="brand">
+
+                <svg
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <defs>
+
+                        <linearGradient
+                            id="logoGradient"
+                            x1="8"
+                            y1="8"
+                            x2="92"
+                            y2="92"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#8B5CF6"
+                            >
+
+                            <stop
+                                offset="55%"
+                                stop-color="#EC4899"
+                            >
+
+                            <stop
+                                offset="100%"
+                                stop-color="#22D3EE"
+                            >
+
+                        </linearGradient>
+
+                    </defs>
+
+                    <rect
+                        x="5"
+                        y="5"
+                        width="90"
+                        height="90"
+                        rx="25"
+                        fill="#0E1018"
+                        stroke="url(#logoGradient)"
+                        stroke-width="3.5"
+                    />
+
+                    <path
+                        d="M21 68V33L34 49L47 33V68"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M55 33L66 68L80 33"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+
+                <div>
+
+                    <strong>
+                        MV Digital Studios
+                    </strong>
+
+                    <span>
+                        Digital Growth & Creative Studio
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">
+                        Blogs
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="menu"
+                id="menu"
+            >
+                ☰
+            </button>
+
+
+        </nav>
+
+    </div>
+
+
+    <main>
+
+
+        <section class="container hero">
+
+
+            <div>
+
+                <div class="eyebrow">
+                    What we build
+                </div>
+
+
+                <h1>
+
+                    Digital
+                    <span class="gradient-text">
+                        systems
+                    </span>
+
+                    that
+                    <span class="gradient-text">
+                        move.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-copy">
+
+                    Strategy, creativity and technology
+                    working together to create a stronger
+                    digital presence for your business.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-visual">
+
+                <div class="visual-box">
+
+                    <div class="visual-line"></div>
+
+                    <div class="visual-line two"></div>
+
+                    <div class="visual-line three"></div>
+
+
+                    <div class="service-orbit"></div>
+
+
+                    <div class="service-core">
+                        MV
+                    </div>
+
+
+                    <div class="visual-tag tag-one">
+                        SEO
+                    </div>
+
+                    <div class="visual-tag tag-two">
+                        CREATIVE
+                    </div>
+
+                    <div class="visual-tag tag-three">
+                        AI VIDEO
+                    </div>
+
+                    <div class="visual-tag tag-four">
+                        WEB
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="container services-section">
+
+
+            <div class="section-intro reveal">
+
+                <h2>
+                    Everything your
+                    digital presence
+                    needs.
+                </h2>
+
+
+                <p>
+
+                    We don't believe in disconnected
+                    marketing activities.
+
+                    Each capability is designed to
+                    support the others.
+
+                </p>
+
+            </div>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    01
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Search Engine Optimization
+                    </h3>
+
+
+                    <p>
+
+                        Build long-term organic
+                        visibility through technical SEO,
+                        keyword strategy, content,
+                        local SEO and website optimization.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            Technical SEO
+                        </span>
+
+                        <span>
+                            On-Page SEO
+                        </span>
+
+                        <span>
+                            Local SEO
+                        </span>
+
+                        <span>
+                            Keyword Strategy
+                        </span>
+
+                        <span>
+                            Content SEO
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    01
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    02
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Social Media Marketing
+                    </h3>
+
+
+                    <p>
+
+                        Create social strategies,
+                        content calendars, campaigns
+                        and visual content that make
+                        brands more memorable.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            Instagram
+                        </span>
+
+                        <span>
+                            Facebook
+                        </span>
+
+                        <span>
+                            Content Strategy
+                        </span>
+
+                        <span>
+                            Social Ads
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    02
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    03
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Performance Marketing
+                    </h3>
+
+
+                    <p>
+
+                        Build paid campaigns around
+                        measurable business goals,
+                        better targeting and stronger
+                        conversion journeys.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            Google Ads
+                        </span>
+
+                        <span>
+                            Meta Ads
+                        </span>
+
+                        <span>
+                            Campaign Strategy
+                        </span>
+
+                        <span>
+                            Conversion Optimization
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    03
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    04
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Video Editing & Graphic Design
+                    </h3>
+
+
+                    <p>
+
+                        Turn ideas into polished,
+                        platform-ready visuals with
+                        editing, motion graphics,
+                        branding and creative design.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            Video Editing
+                        </span>
+
+                        <span>
+                            Motion Graphics
+                        </span>
+
+                        <span>
+                            Brand Design
+                        </span>
+
+                        <span>
+                            Social Creatives
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    04
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    05
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        AI Video Creation
+                    </h3>
+
+
+                    <p>
+
+                        Develop cinematic stories,
+                        product concepts, short-form
+                        videos and visual campaigns
+                        using modern AI production workflows.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            AI Story Videos
+                        </span>
+
+                        <span>
+                            Product Videos
+                        </span>
+
+                        <span>
+                            Social Reels
+                        </span>
+
+                        <span>
+                            Creative Concepts
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    05
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal">
+
+                <div class="service-index">
+                    06
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Website Development
+                    </h3>
+
+
+                    <p>
+
+                        Build fast, responsive websites
+                        with clean interfaces, strong
+                        storytelling and clear calls to action.
+
+                    </p>
+
+
+                    <div class="service-list-small">
+
+                        <span>
+                            Landing Pages
+                        </span>
+
+                        <span>
+                            Business Websites
+                        </span>
+
+                        <span>
+                            UI Design
+                        </span>
+
+                        <span>
+                            Responsive Development
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-visual-number">
+                    06
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <section class="cta">
+
+            <div class="container">
+
+
+                <div class="eyebrow">
+                    Have a project in mind?
+                </div>
+
+
+                <h2>
+                    Let's build
+                    something worth
+                    remembering.
+                </h2>
+
+
+                <p>
+
+                    Tell us about your business,
+                    idea or next campaign.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="button magnetic"
+                >
+
+                    Start a conversation
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="container">
+
+        <div>
+            © 2026 MV Digital Studios
+        </div>
+
+        <a href="mailto:mvdigitalstudio6@gmail.com">
+            mvdigitalstudio6@gmail.com
+        </a>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+
+    <script>
+
+        const prefersReducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+
+        /* MOBILE MENU */
+
+        const menu =
+            document.getElementById("menu");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menu.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("show");
+
+            }
+        );
+
+
+        /* NETWORK */
+
+        const canvas =
+            document.getElementById(
+                "networkCanvas"
+            );
+
+        const ctx =
+            canvas.getContext("2d");
+
+        let width;
+        let height;
+        let points = [];
+
+
+        function resizeCanvas() {
+
+            width =
+                window.innerWidth;
+
+            height =
+                window.innerHeight;
+
+
+            const ratio =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
+
+
+            canvas.width =
+                width * ratio;
+
+            canvas.height =
+                height * ratio;
+
+
+            canvas.style.width =
+                width + "px";
+
+            canvas.style.height =
+                height + "px";
+
+
+            ctx.setTransform(
+                ratio,
+                0,
+                0,
+                ratio,
+                0,
+                0
+            );
+
+
+            points =
+                Array.from(
+                    {
+                        length:
+                            Math.min(
+                                80,
+                                Math.floor(
+                                    width / 17
+                                )
+                            )
+                    },
+                    function () {
+
+                        return {
+
+                            x:
+                                Math.random()
+                                * width,
+
+                            y:
+                                Math.random()
+                                * height,
+
+                            vx:
+                                (
+                                    Math.random()
+                                    - .5
+                                ) * .20,
+
+                            vy:
+                                (
+                                    Math.random()
+                                    - .5
+                                ) * .18
+
+                        };
+
+                    }
+                );
+
+        }
+
+
+        resizeCanvas();
+
+
+        window.addEventListener(
+            "resize",
+            resizeCanvas
+        );
+
+
+        function animate() {
+
+            ctx.clearRect(
+                0,
+                0,
+                width,
+                height
+            );
+
+
+            if (
+                !prefersReducedMotion
+            ) {
+
+                points.forEach(
+                    function (point) {
+
+                        point.x += point.vx;
+
+                        point.y += point.vy;
+
+
+                        if (
+                            point.x < -20
+                        ) {
+                            point.x =
+                                width + 20;
+                        }
+
+                        if (
+                            point.x >
+                            width + 20
+                        ) {
+                            point.x =
+                                -20;
+                        }
+
+
+                        if (
+                            point.y < -20
+                        ) {
+                            point.y =
+                                height + 20;
+                        }
+
+                        if (
+                            point.y >
+                            height + 20
+                        ) {
+                            point.y =
+                                -20;
+                        }
+
+
+                        ctx.beginPath();
+
+                        ctx.arc(
+                            point.x,
+                            point.y,
+                            1,
+                            0,
+                            Math.PI * 2
+                        );
+
+                        ctx.fillStyle =
+                            "rgba(220,225,255,.23)";
+
+                        ctx.fill();
+
+                    }
+                );
+
+
+                for (
+                    let i = 0;
+                    i < points.length;
+                    i++
+                ) {
+
+                    for (
+                        let j = i + 1;
+                        j < points.length;
+                        j++
+                    ) {
+
+                        const a =
+                            points[i];
+
+                        const b =
+                            points[j];
+
+                        const distance =
+                            Math.hypot(
+                                a.x - b.x,
+                                a.y - b.y
+                            );
+
+
+                        if (
+                            distance < 135
+                        ) {
+
+                            ctx.beginPath();
+
+                            ctx.moveTo(
+                                a.x,
+                                a.y
+                            );
+
+                            ctx.lineTo(
+                                b.x,
+                                b.y
+                            );
+
+                            ctx.strokeStyle =
+                                "rgba(140,140,190,.09)";
+
+                            ctx.stroke();
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+            requestAnimationFrame(
+                animate
+            );
+
+        }
+
+
+        animate();
+
+
+        /* GSAP */
+
+        if (!prefersReducedMotion) {
+
+            gsap.registerPlugin(
+                ScrollTrigger
+            );
+
+
+            gsap.from(
+                ".hero > div",
+                {
+                    opacity: 0,
+                    y: 35,
+                    duration: 1,
+                    stagger: 0.12,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.from(
+                ".visual-box",
+                {
+                    scale: .88,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.utils.toArray(
+                ".reveal"
+            ).forEach(
+                function (element) {
+
+                    gsap.from(
+                        element,
+                        {
+                            opacity: 0,
+                            y: 50,
+                            duration: .9,
+
+                            scrollTrigger: {
+                                trigger: element,
+                                start: "top 85%",
+                                once: true
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+            gsap.to(
+                ".grid",
+                {
+                    yPercent: 16,
+
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 1.5
+                    }
+                }
+            );
+
+
+            const mouseGlow =
+                document.getElementById(
+                    "mouseGlow"
+                );
+
+
+            window.addEventListener(
+                "pointermove",
+                function (event) {
+
+                    gsap.to(
+                        mouseGlow,
+                        {
+                            x: event.clientX,
+                            y: event.clientY,
+                            duration: .6,
+                            ease: "power2.out"
+                        }
+                    );
+
+                }
+            );
+
+
+            document
+                .querySelectorAll(".magnetic")
+                .forEach(
+                    function (button) {
+
+                        button.addEventListener(
+                            "pointermove",
+                            function (event) {
+
+                                const rect =
+                                    button.getBoundingClientRect();
+
+
+                                gsap.to(
+                                    button,
+                                    {
+                                        x:
+                                            (
+                                                event.clientX
+                                                -
+                                                (
+                                                    rect.left
+                                                    +
+                                                    rect.width / 2
+                                                )
+                                            ) * .12,
+
+                                        y:
+                                            (
+                                                event.clientY
+                                                -
+                                                (
+                                                    rect.top
+                                                    +
+                                                    rect.height / 2
+                                                )
+                                            ) * .12,
+
+                                        duration:
+                                            .25
+                                    }
+                                );
+
+                            }
+                        );
+
+
+                        button.addEventListener(
+                            "pointerleave",
+                            function () {
+
+                                gsap.to(
+                                    button,
+                                    {
+                                        x: 0,
+                                        y: 0,
+                                        duration: .4
+                                    }
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
