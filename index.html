@@ -1,295 +1,2631 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== SEO ===== -->
-  <title>MV Digital Studios | Digital Marketing Agency</title>
-  <meta name="description" content="MV Digital Studios — modern digital marketing, branding, social media and growth solutions for ambitious brands.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://website-cyan-alpha-13.vercel.app/">
-  <meta name="google-site-verification" content="5jxpwHdKZRAxZIOvjfaGyjhdFLrBPBHjxXk4rmT-68E">
-  <meta name="theme-color" content="#5B2EFF">
+    <meta charset="UTF-8">
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="MV Digital Studios">
-  <meta property="og:title" content="MV Digital Studios | Digital Marketing Agency">
-  <meta property="og:description" content="Digital marketing agency helping brands grow through SEO, social media, performance marketing, branding and creative content.">
-  <meta property="og:url" content="https://website-cyan-alpha-13.vercel.app/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <title>
+        MV Digital Studios | Digital Growth & Creative Studio
+    </title>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "MV Digital Studios",
-    "description": "Digital marketing agency helping brands grow through SEO, social media, performance marketing, branding and creative content.",
-    "url": "https://website-cyan-alpha-13.vercel.app/",
-    "email": "mvdigitalstudio6@gmail.com",
-    "knowsAbout": ["Digital Strategy", "Social Media Marketing", "Performance Marketing", "Brand Identity", "SEO", "Creative Content", "Video Editing", "Graphic Design", "AI Video Creation", "Website Development"]
-  }
-  </script>
+    <meta
+        name="description"
+        content="MV Digital Studios is a digital growth and creative studio specializing in SEO, social media, AI video creation, creative design and website development."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #06070b;
+            color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        :root {
+            --bg: #06070b;
+            --text: #f6f7fb;
+            --muted: #9298a8;
+            --line: rgba(255,255,255,0.10);
+            --violet: #8b5cf6;
+            --pink: #ec4899;
+            --cyan: #22d3ee;
+        }
+
+        /* =========================================
+           BACKGROUND
+        ========================================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(139,92,246,0.15),
+                    transparent 40%
+                ),
+                #06070b;
+        }
+
+        .background::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background:
+                radial-gradient(
+                    circle at 15% 30%,
+                    rgba(34,211,238,0.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(236,72,153,0.09),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 55% 80%,
+                    rgba(139,92,246,0.08),
+                    transparent 25%
+                );
+
+            filter: blur(50px);
+
+            animation: ambientMove 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambientMove {
+
+            0% {
+                transform: translate3d(-2%, -1%, 0) scale(1);
+            }
+
+            100% {
+                transform: translate3d(2%, 2%, 0) scale(1.08);
+            }
+
+        }
+
+        .grid {
+            position: absolute;
+            inset: -20%;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.045) 1px,
+                    transparent 1px
+                );
+
+            background-size: 80px 80px;
+
+            transform:
+                perspective(700px)
+                rotateX(60deg)
+                translateY(25%);
+
+            transform-origin: center bottom;
+
+            opacity: 0.25;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.05);
+
+            left: 50%;
+            top: 20%;
+
+            transform: translate(-50%, -50%);
+
+            box-shadow:
+                0 0 100px rgba(139,92,246,0.08),
+                inset 0 0 80px rgba(236,72,153,0.04);
+
+            animation:
+                rotateGlow 30s linear infinite;
+        }
+
+        .glow::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 15%;
+
+            border-radius: 50%;
+
+            border: 1px dashed rgba(255,255,255,0.07);
+
+        }
+
+        .glow::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 32%;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(34,211,238,0.10);
+
+        }
+
+        @keyframes rotateGlow {
+
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(360deg);
+            }
+
+        }
+
+        #networkCanvas {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+        }
+
+        .mouse-glow {
+
+            position: fixed;
+
+            width: 300px;
+
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,0.10),
+                    transparent 65%
+                );
+
+            transform: translate(-50%, -50%);
+
+            pointer-events: none;
+
+            z-index: -1;
+
+        }
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
+
+        .container {
+
+            width: min(
+                calc(100% - 48px),
+                1240px
+            );
+
+            margin: auto;
+
+        }
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        nav {
+
+            height: 90px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+        .brand svg {
+
+            width: 46px;
+
+            height: 46px;
+
+        }
+
+        .brand-name {
+
+            font-family: "Space Grotesk";
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+        }
+
+        .brand-subtitle {
+
+            color: #747a8a;
+
+            font-size: 10px;
+
+            letter-spacing: 0.13em;
+
+            text-transform: uppercase;
+
+            margin-top: 5px;
+
+        }
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 34px;
+
+            list-style: none;
+
+        }
+
+        .nav-links a {
+
+            color: #aeb3c0;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+
+        }
+
+        .nav-links a:hover {
+
+            color: #ffffff;
+
+        }
+
+        .mobile-menu {
+
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 26px;
+
+            cursor: pointer;
+
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height:
+                calc(100vh - 90px);
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 60px;
+
+            padding:
+                70px
+                0;
+
+        }
+
+        .eyebrow {
+
+            text-transform: uppercase;
+
+            font-size: 11px;
+
+            letter-spacing: 0.24em;
+
+            color: #8d93a3;
+
+            margin-bottom: 25px;
+
+        }
+
+        .hero-title {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(55px, 7vw, 105px);
+
+            line-height:
+                0.92;
+
+            letter-spacing:
+                -0.06em;
+
+            font-weight: 600;
+
+        }
+
+        .gradient-text {
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #cabdff 40%,
+                    #f0a7d3 70%,
+                    #a4e8ee 100%
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+        .hero-description {
+
+            color: var(--muted);
+
+            max-width: 580px;
+
+            font-size: 17px;
+
+            line-height: 1.75;
+
+            margin:
+                30px
+                0
+                35px;
+
+        }
+
+        .buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding:
+                15px
+                22px;
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius:
+                999px;
+
+            font-size: 13px;
+
+            transition:
+                0.3s;
+
+        }
+
+        .button-primary {
+
+            background: #f5f5f7;
+
+            color: #08090d;
+
+            border-color:
+                #f5f5f7;
+
+        }
+
+        .button:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+        .button-secondary:hover {
+
+            background:
+                rgba(255,255,255,0.05);
+
+        }
+
+        /* =========================================
+           HERO VISUAL
+        ========================================= */
+
+        .hero-visual {
+
+            position: relative;
+
+            min-height: 590px;
+
+            display: grid;
+
+            place-items: center;
+
+        }
+
+        .visual-stage {
+
+            width: min(
+                560px,
+                100%
+            );
+
+            aspect-ratio: 1 / 1;
+
+            position: relative;
+
+        }
+
+        .core {
+
+            position: absolute;
+
+            width: 30%;
+
+            aspect-ratio: 1;
+
+            left: 35%;
+
+            top: 35%;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    #27263d,
+                    #0d0e16 60%,
+                    #07080c
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            box-shadow:
+                0 0 100px
+                rgba(139,92,246,0.18),
+
+                0 0 50px
+                rgba(34,211,238,0.08),
+
+                inset
+                0 0 40px
+                rgba(255,255,255,0.04);
+
+            z-index: 3;
+
+        }
+
+        .core span {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size: 70px;
+
+            font-weight: 600;
+
+            letter-spacing:
+                -0.08em;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #cbbdff 60%,
+                    #8feaf5
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+        .ring {
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+        .ring-one {
+
+            width: 45%;
+            height: 45%;
+
+        }
+
+        .ring-two {
+
+            width: 68%;
+            height: 68%;
+
+            border-color:
+                rgba(139,92,246,0.16);
+
+        }
+
+        .ring-three {
+
+            width: 91%;
+            height: 91%;
+
+            border-color:
+                rgba(34,211,238,0.11);
+
+            border-style:
+                dashed;
+
+        }
+
+        .node {
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            box-shadow:
+                0 0 20px
+                rgba(255,255,255,0.8);
+
+        }
+
+        .node-one {
+
+            top: 8%;
+            left: 65%;
+
+        }
+
+        .node-two {
+
+            right: 8%;
+            top: 38%;
+
+            background: var(--pink);
+
+            box-shadow:
+                0 0 18px
+                rgba(236,72,153,0.7);
+
+        }
+
+        .node-three {
+
+            left: 5%;
+            bottom: 22%;
+
+            background: var(--cyan);
+
+            box-shadow:
+                0 0 18px
+                rgba(34,211,238,0.7);
+
+        }
+
+        .floating-card {
+
+            position: absolute;
+
+            background:
+                rgba(9,10,16,0.75);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.10);
+
+            backdrop-filter:
+                blur(16px);
+
+            border-radius: 18px;
+
+            padding: 16px;
+
+            box-shadow:
+                0 25px 80px
+                rgba(0,0,0,0.35);
+
+            z-index: 5;
+
+        }
+
+        .card-one {
+
+            width: 180px;
+
+            top: 15%;
+            left: 0;
+
+        }
+
+        .card-two {
+
+            width: 230px;
+
+            top: 10%;
+            right: 0;
+
+        }
+
+        .card-three {
+
+            width: 190px;
+
+            left: 4%;
+            bottom: 8%;
+
+        }
+
+        .card-four {
+
+            width: 235px;
+
+            right: 3%;
+            bottom: 15%;
+
+        }
+
+        .small-label {
+
+            color: #6f7585;
+
+            font-size: 9px;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+        }
+
+        .floating-card strong {
+
+            display: block;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size: 14px;
+
+            margin-top: 9px;
+
+        }
+
+        .signal {
+
+            height: 4px;
+
+            border-radius: 20px;
+
+            margin-top: 13px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--cyan)
+                );
+
+            box-shadow:
+                0 0 15px
+                rgba(139,92,246,0.25);
+
+        }
+
+        /* =========================================
+           MARQUEE
+        ========================================= */
+
+        .marquee-wrapper {
+
+            border-top:
+                1px solid
+                var(--line);
+
+            border-bottom:
+                1px solid
+                var(--line);
+
+            overflow: hidden;
+
+            padding: 18px 0;
+
+        }
+
+        .marquee {
+
+            display: flex;
+
+            gap: 50px;
+
+            width: max-content;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.10em;
+
+            color: #9ca2b0;
+
+        }
+
+        .marquee span::after {
+
+            content: "✦";
+
+            margin-left: 50px;
+
+            color: #606676;
+
+        }
+
+        /* =========================================
+           SECTIONS
+        ========================================= */
+
+        .section {
+
+            padding:
+                130px
+                0;
+
+        }
+
+        .section-header {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap: 40px;
+
+            margin-bottom:
+                60px;
+
+        }
+
+        .section-title {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(40px, 5vw, 72px);
+
+            line-height:
+                0.96;
+
+            letter-spacing:
+                -0.05em;
+
+            font-weight:
+                500;
+
+            max-width:
+                720px;
+
+        }
+
+        .section-description {
+
+            color:
+                #868c9b;
+
+            line-height:
+                1.75;
+
+            max-width:
+                390px;
+
+            font-size:
+                14px;
+
+        }
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .service-list {
+
+            border-top:
+                1px solid
+                var(--line);
+
+        }
+
+        .service-row {
+
+            display: grid;
+
+            grid-template-columns:
+                90px 1fr auto;
+
+            gap: 30px;
+
+            align-items:
+                center;
+
+            padding:
+                32px
+                0;
+
+            border-bottom:
+                1px solid
+                var(--line);
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+        .service-row::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(139,92,246,0.07),
+                    rgba(236,72,153,0.05),
+                    rgba(34,211,238,0.03)
+                );
+
+            transform:
+                translateX(-100%);
+
+            transition:
+                0.7s;
+
+        }
+
+        .service-row:hover::before {
+
+            transform:
+                translateX(0);
+
+        }
+
+        .service-number {
+
+            color:
+                #626879;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                12px;
+
+        }
+
+        .service-row h3 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(28px, 4vw, 50px);
+
+            font-weight:
+                500;
+
+            letter-spacing:
+                -0.04em;
+
+            position:
+                relative;
+
+        }
+
+        .service-row p {
+
+            color:
+                #7f8595;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.6;
+
+            max-width:
+                610px;
+
+            margin-top:
+                7px;
+
+            position:
+                relative;
+
+        }
+
+        .arrow {
+
+            font-size:
+                28px;
+
+            color:
+                #858b9a;
+
+            position:
+                relative;
+
+            transition:
+                0.3s;
+
+        }
+
+        .service-row:hover .arrow {
+
+            transform:
+                translate(5px, -5px);
+
+            color:
+                #ffffff;
+
+        }
+
+        /* =========================================
+           STATEMENT
+        ========================================= */
+
+        .statement {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                80px;
+
+            align-items:
+                end;
+
+        }
+
+        .statement-large {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(38px, 5vw, 68px);
+
+            line-height:
+                1.03;
+
+            letter-spacing:
+                -0.05em;
+
+        }
+
+        .statement-copy {
+
+            color:
+                #8c92a0;
+
+            line-height:
+                1.8;
+
+            max-width:
+                520px;
+
+        }
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta {
+
+            padding:
+                150px
+                0;
+
+            border-top:
+                1px solid
+                var(--line);
+
+            text-align:
+                center;
+
+        }
+
+        .cta h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(42px, 7vw, 90px);
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.06em;
+
+            max-width:
+                980px;
+
+            margin:
+                0
+                auto
+                28px;
+
+        }
+
+        .cta p {
+
+            max-width:
+                600px;
+
+            margin:
+                0
+                auto
+                30px;
+
+            color:
+                #8b91a0;
+
+            line-height:
+                1.75;
+
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            border-top:
+                1px solid
+                var(--line);
+
+            padding:
+                30px
+                0;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            color:
+                #747a8b;
+
+            font-size:
+                12px;
+
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .hero-visual {
+
+                min-height:
+                    500px;
+
+            }
+
+            .statement {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .section-header {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    min(
+                        calc(100% - 30px),
+                        1240px
+                    );
+
+            }
+
+            nav {
+
+                height:
+                    76px;
+
+            }
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                top:
+                    76px;
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                padding:
+                    25px;
+
+                flex-direction:
+                    column;
+
+                background:
+                    rgba(6,7,11,0.96);
+
+                border-bottom:
+                    1px solid
+                    var(--line);
+
+            }
+
+            .nav-links.show {
+
+                display:
+                    flex;
+
+            }
+
+            .mobile-menu {
+
+                display:
+                    block;
+
+            }
+
+            .hero {
+
+                padding:
+                    60px
+                    0;
+
+            }
+
+            .hero-title {
+
+                font-size:
+                    54px;
+
+            }
+
+            .hero-visual {
+
+                min-height:
+                    420px;
+
+            }
+
+            .card-one,
+            .card-three {
+
+                left:
+                    -10px;
+
+            }
+
+            .card-two,
+            .card-four {
+
+                right:
+                    -10px;
+
+            }
+
+            .service-row {
+
+                grid-template-columns:
+                    45px
+                    1fr
+                    auto;
+
+                gap:
+                    12px;
+
+            }
+
+            footer {
+
+                flex-direction:
+                    column;
+
+                gap:
+                    10px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="MV Digital Studios, home">
-        <span class="brand-mark" aria-hidden="true">MV</span>
-        <span class="brand-text"><strong>MV Digital Studios</strong><small>Digital Growth Agency</small></span>
-      </a>
-      <nav class="main-nav" id="mainNav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact Us</a>
-        <a class="btn btn-primary btn-sm" href="#contact">Let's Talk</a>
-      </nav>
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
-    </div>
-  </header>
 
-  <main id="main">
+    <div class="background">
 
-    <!-- ===== Hero ===== -->
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="tag">Your digital growth partner</p>
-          <h1 id="hero-title">
-            <span>We turn attention</span>
-            <span>into growth.</span>
-          </h1>
-          <p class="lead">
-            MV Digital Studios is a digital marketing agency helping brands grow
-            through SEO, social media, performance marketing, branding and creative content.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#services">Explore Services →</a>
-            <a class="btn btn-outline" href="#contact">Let's Talk</a>
-          </div>
-        </div>
+        <div class="grid"></div>
 
-        <figure class="growth">
-          <div class="growth-top"><strong>Performance live</strong><span>Create • Grow • Evolve</span></div>
-          <p class="growth-num">+186%</p>
-          <p class="growth-sub">Growth trajectory</p>
-          <div class="bars" role="img" aria-label="Bar chart showing growth rising step by step">
-            <span style="--h:20%;--i:0"></span>
-            <span style="--h:30%;--i:1"></span>
-            <span style="--h:28%;--i:2"></span>
-            <span style="--h:46%;--i:3"></span>
-            <span style="--h:55%;--i:4"></span>
-            <span style="--h:68%;--i:5"></span>
-            <span style="--h:82%;--i:6"></span>
-            <span class="peak" style="--h:100%;--i:7"></span>
-          </div>
-          <ul class="pillars">
-            <li><span>Visibility</span><strong>SEO Growth</strong></li>
-            <li><span>Community</span><strong>Social Impact</strong></li>
-            <li><span>Creative</span><strong>AI Video</strong></li>
-            <li><span>Experience</span><strong>Web Design</strong></li>
-          </ul>
-          <figcaption class="growth-brand">MV Digital Studios</figcaption>
-        </figure>
-      </div>
-    </section>
+        <div class="glow"></div>
 
-    <!-- ===== Scrolling services strip ===== -->
-    <div class="marquee" role="region" aria-label="Our services">
-      <ul class="marquee-track">
-        <li>Digital Strategy</li><li>Social Media Marketing</li><li>Performance Marketing</li>
-        <li>Brand Identity</li><li>SEO &amp; Visibility</li><li>Creative Content</li>
-        <li>Video Editing &amp; Graphic Designing</li><li>AI Video Creation</li><li>Website Development</li>
-        <li aria-hidden="true">Digital Strategy</li><li aria-hidden="true">Social Media Marketing</li><li aria-hidden="true">Performance Marketing</li>
-        <li aria-hidden="true">Brand Identity</li><li aria-hidden="true">SEO &amp; Visibility</li><li aria-hidden="true">Creative Content</li>
-        <li aria-hidden="true">Video Editing &amp; Graphic Designing</li><li aria-hidden="true">AI Video Creation</li><li aria-hidden="true">Website Development</li>
-      </ul>
+        <canvas id="networkCanvas"></canvas>
+
     </div>
 
-    <!-- ===== Stats ===== -->
-    <section class="stats-band" aria-label="MV Digital Studios in numbers">
-      <div class="wrap">
-        <dl class="stats">
-          <div><dt>Projects Delivered</dt><dd>50+</dd></div>
-          <div><dt>Average Growth Focus</dt><dd>3x</dd></div>
-          <div><dt>Creative Thinking</dt><dd>24/7</dd></div>
-        </dl>
-      </div>
-    </section>
 
-    <!-- ===== Services ===== -->
-    <section class="section bg-white" id="services" aria-labelledby="services-title">
-      <div class="wrap split">
-        <div class="sticky">
-          <p class="tag">What We Do</p>
-          <h2 id="services-title">Digital marketing, designed to perform.</h2>
-          <p class="lead">
-            Strategy, creativity and technology come together to build
-            digital experiences that help brands stand out.
-          </p>
-        </div>
+    <div class="mouse-glow" id="mouseGlow"></div>
 
-        <div class="accordion">
-          <details name="svc" open>
-            <summary><h3>Digital Strategy</h3></summary>
-            <p>Data-backed strategies designed to clarify your positioning, audience and growth opportunities.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Social Media Marketing</h3></summary>
-            <p>Content systems that make brands more recognizable, engaging and relevant across social platforms.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Performance Marketing</h3></summary>
-            <p>Paid campaigns focused on discovering profitable audiences and improving measurable acquisition.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Brand Identity</h3></summary>
-            <p>Visual identities and brand systems that create consistency, personality and memorability.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>SEO &amp; Visibility</h3></summary>
-            <p>Search optimization that helps your brand become easier to discover and easier to trust.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Creative Content</h3></summary>
-            <p>Scroll-stopping visuals, campaigns and creative concepts created to make people pay attention.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Video Editing &amp; Graphic Designing</h3></summary>
-            <p>Professional video editing, social media creatives, promotional graphics and visual content that make your brand stand out.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>AI Video Creation</h3></summary>
-            <p>AI-powered video production for advertisements, social media content, storytelling and creative campaigns with faster turnaround.</p>
-          </details>
-          <details name="svc">
-            <summary><h3>Website Development</h3></summary>
-            <p>Modern, responsive and conversion-focused websites designed to give your business a strong digital presence and better user experience.</p>
-          </details>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== Why us ===== -->
-    <section class="section bg-ink on-dark" id="why" aria-labelledby="why-title">
-      <div class="wrap why-grid">
-        <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
-          alt="Modern creative studio where the MV Digital Studios team works"
-          width="1200" height="900" loading="lazy" decoding="async">
-        <div>
-          <p class="tag">Why MV Digital Studios</p>
-          <h2 id="why-title">Creative thinking. Business results.</h2>
-          <p class="lead">
-            We believe great marketing starts with understanding
-            people. We combine creative storytelling with strategy,
-            research and performance data to build digital brands
-            that matter.
-          </p>
-          <ul class="checks">
-            <li>Strategy built around your business goals</li>
-            <li>Creative campaigns designed for attention</li>
-            <li>Transparent communication and reporting</li>
-            <li>Long-term thinking instead of short-term hacks</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
 
-    <!-- ===== Process ===== -->
-    <section class="section bg-paper" id="process" aria-labelledby="process-title">
-      <div class="wrap">
-        <div class="process-head">
-          <p class="tag">Our Process</p>
-          <h2 id="process-title">From idea to impact.</h2>
-        </div>
-        <ol class="steps">
-          <li>
-            <span class="step-no">01</span>
-            <p class="step-tag">Discover</p>
-            <h3>Understand</h3>
-            <p>We learn about your brand, customers, market and business objectives.</p>
-          </li>
-          <li>
-            <span class="step-no">02</span>
-            <p class="step-tag">Strategize</p>
-            <h3>Build The Plan</h3>
-            <p>We turn insights into a clear strategy, campaign direction and creative roadmap.</p>
-          </li>
-          <li>
-            <span class="step-no">03</span>
-            <p class="step-tag">Create</p>
-            <h3>Make It Happen</h3>
-            <p>Content, campaigns and digital experiences are created with precision and personality.</p>
-          </li>
-          <li>
-            <span class="step-no">04</span>
-            <p class="step-tag">Optimize</p>
-            <h3>Improve &amp; Grow</h3>
-            <p>We monitor performance, learn from the data and keep improving what works.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+    <div class="container">
 
-    <!-- ===== Contact ===== -->
-    <section class="section bg-violet on-dark" id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <p class="tag">Let's Work Together</p>
-          <h2 id="contact-title">Have an idea? Let's build it.</h2>
-          <p class="lead">Tell us a little about your project and we'll get back to you.</p>
+        <nav>
 
-          <h3 class="contact-sub-title">Start a conversation.</h3>
-          <p class="contact-sub">
-            Whether you're launching something new or looking
-            to level up your digital presence, we'd love to
-            hear what you're working on.
-          </p>
+            <a href="index.html" class="brand">
 
-          <dl class="contact-facts">
-            <div><dt>Email</dt><dd><a href="mailto:mvdigitalstudio6@gmail.com">mvdigitalstudio6@gmail.com</a></dd></div>
-            <div><dt>Available For</dt><dd>Brands • Startups • Creators • Businesses</dd></div>
-            <div><dt>Response Time</dt><dd>Usually within 24–48 hours</dd></div>
-          </dl>
-        </div>
+                <svg
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
 
-        <form class="form" id="enquiryForm" novalidate>
-          <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="brand">Business / Brand</label><input id="brand" name="brand" type="text" autocomplete="organization"></div>
-          <div class="field"><label for="message">Tell us about your project</label><textarea id="message" name="message" rows="5" required></textarea></div>
-          <button class="btn btn-primary btn-block" type="submit">Send Enquiry →</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+                    <defs>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <p><strong>MV Digital Studios</strong><br>Digital Growth Agency</p>
-        <nav aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+                        <linearGradient
+                            id="logoGradient"
+                            x1="8"
+                            y1="8"
+                            x2="92"
+                            y2="92"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#8B5CF6"
+                            />
+
+                            <stop
+                                offset="55%"
+                                stop-color="#EC4899"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#22D3EE"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+                    <rect
+                        x="5"
+                        y="5"
+                        width="90"
+                        height="90"
+                        rx="25"
+                        fill="#0E1018"
+                        stroke="url(#logoGradient)"
+                        stroke-width="3.5"
+                    />
+
+                    <path
+                        d="M21 68V33L34 49L47 33V68"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M55 33L66 68L80 33"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+
+                <div>
+
+                    <div class="brand-name">
+                        MV Digital Studios
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Digital Growth & Creative Studio
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">
+                        Blogs
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
         </nav>
-      </div>
-      <p class="wordmark" aria-hidden="true">MV Digital Studios</p>
-      <p class="copy">© <span id="year">2026</span> MV Digital Studios. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <script src="script.js" defer></script>
+    </div>
+
+
+    <main>
+
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <section class="container hero">
+
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Digital growth × creative technology
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    We make
+                    <span class="gradient-text">
+                        digital
+                    </span>
+
+                    feel
+
+                    <span class="gradient-text">
+                        alive.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    MV Digital Studios combines strategy,
+                    creative thinking, technology and modern
+                    AI workflows to build digital experiences
+                    people remember.
+
+                </p>
+
+
+                <div class="buttons">
+
+                    <a
+                        href="contact.html"
+                        class="button button-primary magnetic"
+                    >
+
+                        Start a project
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="services.html"
+                        class="button button-secondary magnetic"
+                    >
+
+                        Explore services
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+
+                <div class="visual-stage" id="visualStage">
+
+
+                    <div class="ring ring-one">
+                        <span class="node node-one"></span>
+                    </div>
+
+
+                    <div class="ring ring-two">
+                        <span class="node node-two"></span>
+                    </div>
+
+
+                    <div class="ring ring-three">
+                        <span class="node node-three"></span>
+                    </div>
+
+
+                    <div class="core" id="core">
+
+                        <span>
+                            MV
+                        </span>
+
+                    </div>
+
+
+                    <div class="floating-card card-one floating">
+
+                        <div class="small-label">
+                            Creative system
+                        </div>
+
+                        <strong>
+                            Brand + Content
+                        </strong>
+
+                        <div class="signal"></div>
+
+                    </div>
+
+
+                    <div class="floating-card card-two floating">
+
+                        <div class="small-label">
+                            Growth engine
+                        </div>
+
+                        <strong>
+                            SEO + Social + Performance
+                        </strong>
+
+                        <div class="signal"></div>
+
+                    </div>
+
+
+                    <div class="floating-card card-three floating">
+
+                        <div class="small-label">
+                            Experience
+                        </div>
+
+                        <strong>
+                            Web & UI
+                        </strong>
+
+                        <div class="signal"></div>
+
+                    </div>
+
+
+                    <div class="floating-card card-four floating">
+
+                        <div class="small-label">
+                            Studio mode
+                        </div>
+
+                        <strong>
+                            AI Video / Design / Motion
+                        </strong>
+
+                        <div class="signal"></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================================
+             MARQUEE
+        ========================================== -->
+
+        <div class="marquee-wrapper">
+
+            <div class="marquee" id="marquee">
+
+                <span>Strategy</span>
+
+                <span>SEO</span>
+
+                <span>Social Media</span>
+
+                <span>Performance</span>
+
+                <span>Branding</span>
+
+                <span>AI Video</span>
+
+                <span>Web Development</span>
+
+                <span>Creative Design</span>
+
+                <span>Strategy</span>
+
+                <span>SEO</span>
+
+                <span>AI Video</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             SERVICES INTRO
+        ========================================== -->
+
+        <section class="container section">
+
+            <div class="section-header reveal">
+
+                <h2 class="section-title">
+
+                    More than marketing.
+                    We build digital
+                    momentum.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    From search visibility to social content,
+                    from AI-powered storytelling to websites,
+                    we connect the pieces into one strong
+                    digital experience.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-list">
+
+
+                <a
+                    href="services.html"
+                    class="service-row reveal"
+                >
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Search & SEO
+                        </h3>
+
+                        <p>
+                            Build discoverability through
+                            technical SEO, content strategy,
+                            local SEO and search-focused
+                            growth.
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="services.html"
+                    class="service-row reveal"
+                >
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Social & Content
+                        </h3>
+
+                        <p>
+                            Develop content systems that
+                            turn attention into brand
+                            recognition and community.
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="services.html"
+                    class="service-row reveal"
+                >
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Creative & AI Video
+                        </h3>
+
+                        <p>
+                            Create visual stories, motion
+                            graphics and AI-powered videos
+                            built to stop the scroll.
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="services.html"
+                    class="service-row reveal"
+                >
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Web Experiences
+                        </h3>
+
+                        <p>
+                            Build modern websites where
+                            design, storytelling and
+                            conversion work together.
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             STATEMENT
+        ========================================== -->
+
+        <section class="container section">
+
+            <div class="statement">
+
+                <div class="statement-large reveal">
+
+                    Good creative earns attention.
+
+                    Great creative earns
+                    the next click.
+
+                </div>
+
+
+                <div class="statement-copy reveal">
+
+                    MV Digital Studios is built for
+                    businesses that want more than
+                    disconnected marketing tactics.
+
+                    We combine strategy, design,
+                    storytelling and technology to
+                    create a digital presence with
+                    a clear purpose.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CTA
+        ========================================== -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="eyebrow reveal">
+                    Ready when you are
+                </div>
+
+
+                <h2 class="reveal">
+
+                    Let's make your
+                    next digital move
+                    impossible to miss.
+
+                </h2>
+
+
+                <p class="reveal">
+
+                    Tell us what you are building.
+                    We'll bring the strategy,
+                    creative direction and digital
+                    systems to move it forward.
+
+                </p>
+
+
+                <a
+                    href="contact.html"
+                    class="button button-primary magnetic reveal"
+                >
+
+                    Start a conversation
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="container">
+
+        <div>
+            © 2026 MV Digital Studios
+        </div>
+
+        <div>
+
+            <a href="mailto:mvdigitalstudio6@gmail.com">
+                mvdigitalstudio6@gmail.com
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+
+    <script>
+
+        const prefersReducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+
+        /* =========================================
+           MOBILE MENU
+        ========================================== */
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        mobileMenu.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("show");
+
+            }
+        );
+
+
+        /* =========================================
+           NETWORK PARTICLES
+        ========================================== */
+
+        const canvas =
+            document.getElementById(
+                "networkCanvas"
+            );
+
+        const ctx =
+            canvas.getContext("2d");
+
+
+        let width;
+        let height;
+
+        let points = [];
+
+
+        function resizeCanvas() {
+
+            width =
+                window.innerWidth;
+
+            height =
+                window.innerHeight;
+
+
+            const ratio =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
+
+
+            canvas.width =
+                width * ratio;
+
+            canvas.height =
+                height * ratio;
+
+
+            canvas.style.width =
+                width + "px";
+
+            canvas.style.height =
+                height + "px";
+
+
+            ctx.setTransform(
+                ratio,
+                0,
+                0,
+                ratio,
+                0,
+                0
+            );
+
+
+            points =
+                Array.from(
+                    {
+                        length:
+                            Math.min(
+                                85,
+                                Math.floor(
+                                    width / 16
+                                )
+                            )
+                    },
+                    function () {
+
+                        return {
+
+                            x:
+                                Math.random()
+                                * width,
+
+                            y:
+                                Math.random()
+                                * height,
+
+                            vx:
+                                (
+                                    Math.random()
+                                    - 0.5
+                                )
+                                * 0.22,
+
+                            vy:
+                                (
+                                    Math.random()
+                                    - 0.5
+                                )
+                                * 0.20,
+
+                            radius:
+                                Math.random()
+                                * 1.4
+                                + 0.3
+
+                        };
+
+                    }
+                );
+
+        }
+
+
+        resizeCanvas();
+
+
+        window.addEventListener(
+            "resize",
+            resizeCanvas
+        );
+
+
+        function animateNetwork() {
+
+            ctx.clearRect(
+                0,
+                0,
+                width,
+                height
+            );
+
+
+            if (
+                !prefersReducedMotion
+            ) {
+
+                points.forEach(
+                    function (point) {
+
+                        point.x += point.vx;
+
+                        point.y += point.vy;
+
+
+                        if (
+                            point.x < -20
+                        ) {
+                            point.x =
+                                width + 20;
+                        }
+
+                        if (
+                            point.x >
+                            width + 20
+                        ) {
+                            point.x = -20;
+                        }
+
+                        if (
+                            point.y < -20
+                        ) {
+                            point.y =
+                                height + 20;
+                        }
+
+                        if (
+                            point.y >
+                            height + 20
+                        ) {
+                            point.y = -20;
+                        }
+
+
+                        ctx.beginPath();
+
+                        ctx.arc(
+                            point.x,
+                            point.y,
+                            point.radius,
+                            0,
+                            Math.PI * 2
+                        );
+
+                        ctx.fillStyle =
+                            "rgba(220,225,255,0.25)";
+
+                        ctx.fill();
+
+                    }
+                );
+
+
+                for (
+                    let i = 0;
+                    i < points.length;
+                    i++
+                ) {
+
+                    for (
+                        let j = i + 1;
+                        j < points.length;
+                        j++
+                    ) {
+
+                        const a =
+                            points[i];
+
+                        const b =
+                            points[j];
+
+
+                        const distance =
+                            Math.hypot(
+                                a.x - b.x,
+                                a.y - b.y
+                            );
+
+
+                        if (
+                            distance < 135
+                        ) {
+
+                            ctx.beginPath();
+
+                            ctx.moveTo(
+                                a.x,
+                                a.y
+                            );
+
+                            ctx.lineTo(
+                                b.x,
+                                b.y
+                            );
+
+
+                            ctx.strokeStyle =
+                                `rgba(150,150,200,${
+                                    (1 - distance / 135)
+                                    * 0.10
+                                })`;
+
+
+                            ctx.stroke();
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+            requestAnimationFrame(
+                animateNetwork
+            );
+
+        }
+
+
+        animateNetwork();
+
+
+        /* =========================================
+           GSAP
+        ========================================== */
+
+        if (!prefersReducedMotion) {
+
+            gsap.registerPlugin(
+                ScrollTrigger
+            );
+
+
+            gsap.from(
+                ".hero-content > *",
+                {
+                    opacity: 0,
+                    y: 35,
+                    duration: 0.9,
+                    stagger: 0.12,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.from(
+                ".core",
+                {
+                    scale: 0.65,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.from(
+                ".ring",
+                {
+                    scale: 0.70,
+                    opacity: 0,
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.utils.toArray(
+                ".floating"
+            ).forEach(
+                function (card, index) {
+
+                    gsap.to(
+                        card,
+                        {
+                            y:
+                                index % 2 === 0
+                                    ? -18
+                                    : 18,
+
+                            x:
+                                index % 2 === 0
+                                    ? -7
+                                    : 7,
+
+                            rotation:
+                                index % 2 === 0
+                                    ? -1
+                                    : 1,
+
+                            duration:
+                                3.5
+                                + index * 0.3,
+
+                            repeat: -1,
+
+                            yoyo: true,
+
+                            ease: "sine.inOut",
+
+                            delay:
+                                index * 0.2
+
+                        }
+                    );
+
+                }
+            );
+
+
+            gsap.to(
+                ".grid",
+                {
+                    yPercent: 18,
+
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 1.5
+                    }
+                }
+            );
+
+
+            gsap.to(
+                ".glow",
+                {
+                    rotation: 80,
+                    scale: 1.08,
+
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 1.4
+                    }
+                }
+            );
+
+
+            gsap.to(
+                "#marquee",
+                {
+                    x: -500,
+
+                    scrollTrigger: {
+                        trigger: ".marquee-wrapper",
+                        start: "top bottom",
+                        end: "bottom top",
+                        scrub: 1
+                    }
+                }
+            );
+
+
+            gsap.utils.toArray(
+                ".reveal"
+            ).forEach(
+                function (element) {
+
+                    gsap.from(
+                        element,
+                        {
+                            opacity: 0,
+                            y: 45,
+                            duration: 0.9,
+
+                            scrollTrigger: {
+                                trigger: element,
+                                start: "top 85%",
+                                once: true
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+            gsap.to(
+                "#core",
+                {
+                    boxShadow:
+                        "0 0 140px rgba(139,92,246,0.25), 0 0 60px rgba(34,211,238,0.12)",
+
+                    duration: 2.8,
+
+                    repeat: -1,
+
+                    yoyo: true,
+
+                    ease: "sine.inOut"
+
+                }
+            );
+
+
+            /* =====================================
+               MOUSE GLOW
+            ====================================== */
+
+            const mouseGlow =
+                document.getElementById(
+                    "mouseGlow"
+                );
+
+
+            window.addEventListener(
+                "pointermove",
+                function (event) {
+
+                    gsap.to(
+                        mouseGlow,
+                        {
+                            x:
+                                event.clientX,
+
+                            y:
+                                event.clientY,
+
+                            duration:
+                                0.6,
+
+                            ease:
+                                "power2.out"
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =====================================
+               MAGNETIC BUTTONS
+            ====================================== */
+
+            document
+                .querySelectorAll(".magnetic")
+                .forEach(
+                    function (button) {
+
+                        button.addEventListener(
+                            "pointermove",
+                            function (event) {
+
+                                const rect =
+                                    button.getBoundingClientRect();
+
+
+                                const x =
+                                    event.clientX
+                                    -
+                                    (
+                                        rect.left
+                                        +
+                                        rect.width / 2
+                                    );
+
+
+                                const y =
+                                    event.clientY
+                                    -
+                                    (
+                                        rect.top
+                                        +
+                                        rect.height / 2
+                                    );
+
+
+                                gsap.to(
+                                    button,
+                                    {
+                                        x:
+                                            x * 0.12,
+
+                                        y:
+                                            y * 0.12,
+
+                                        duration:
+                                            0.25
+
+                                    }
+                                );
+
+                            }
+                        );
+
+
+                        button.addEventListener(
+                            "pointerleave",
+                            function () {
+
+                                gsap.to(
+                                    button,
+                                    {
+                                        x: 0,
+                                        y: 0,
+                                        duration: 0.45,
+                                        ease: "elastic.out(1,0.45)"
+                                    }
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+        }
+
+    </script>
+
+
 </body>
+
 </html>
