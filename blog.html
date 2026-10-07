@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Blogs | MV Digital Studios
+    </title>
+
+    <meta
+        name="description"
+        content="Read digital marketing, SEO, social media, AI video and website insights from MV Digital Studios."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+
+            margin:
+                0;
+
+            padding:
+                0;
+
+            box-sizing:
+                border-box;
+
+        }
+
+        body {
+
+            background:
+                #06070b;
+
+            color:
+                white;
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            overflow-x:
+                hidden;
+
+        }
+
+        a {
+
+            text-decoration:
+                none;
+
+            color:
+                inherit;
+
+        }
+
+        :root {
+
+            --line:
+                rgba(255,255,255,.10);
+
+            --muted:
+                #9298a8;
+
+            --violet:
+                #8b5cf6;
+
+            --pink:
+                #ec4899;
+
+            --cyan:
+                #22d3ee;
+
+        }
+
+        /* ====================================
+           BACKGROUND
+        ===================================== */
+
+        .background {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            z-index:
+                -10;
+
+            overflow:
+                hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(139,92,246,.15),
+                    transparent 40%
+                ),
+                #06070b;
+
+        }
+
+        .background::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                -20%;
+
+            background:
+                radial-gradient(
+                    circle at 15% 30%,
+                    rgba(34,211,238,.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 80% 25%,
+                    rgba(236,72,153,.08),
+                    transparent 25%
+                );
+
+            filter:
+                blur(50px);
+
+            animation:
+                blogAmbient
+                12s
+                ease-in-out
+                infinite
+                alternate;
+
+        }
+
+        @keyframes blogAmbient {
+
+            from {
+
+                transform:
+                    translate(-2%, -1%)
+                    scale(1);
+
+            }
+
+            to {
+
+                transform:
+                    translate(3%, 2%)
+                    scale(1.08);
+
+            }
+
+        }
+
+        .grid {
+
+            position:
+                absolute;
+
+            inset:
+                -20%;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.04) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.04) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                78px
+                78px;
+
+            transform:
+                perspective(700px)
+                rotateX(58deg)
+                translateY(25%);
+
+            opacity:
+                .24;
+
+        }
+
+        /* ====================================
+           LAYOUT
+        ===================================== */
+
+        .container {
+
+            width:
+                min(
+                    calc(100% - 48px),
+                    1240px
+                );
+
+            margin:
+                auto;
+
+        }
+
+        /* ====================================
+           NAV
+        ===================================== */
+
+        nav {
+
+            height:
+                90px;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-bottom:
+                1px solid
+                var(--line);
+
+        }
+
+        .brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+        }
+
+        .brand svg {
+
+            width:
+                46px;
+
+            height:
+                46px;
+
+        }
+
+        .brand strong {
+
+            display:
+                block;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                15px;
+
+        }
+
+        .brand span {
+
+            display:
+                block;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                .13em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                #747a8b;
+
+            margin-top:
+                5px;
+
+        }
+
+        .nav-links {
+
+            display:
+                flex;
+
+            gap:
+                34px;
+
+            list-style:
+                none;
+
+        }
+
+        .nav-links a {
+
+            color:
+                #aeb3c0;
+
+            font-size:
+                13px;
+
+            transition:
+                .3s;
+
+        }
+
+        .nav-links a:hover {
+
+            color:
+                white;
+
+        }
+
+        .menu {
+
+            display:
+                none;
+
+            border:
+                none;
+
+            background:
+                none;
+
+            color:
+                white;
+
+            font-size:
+                26px;
+
+        }
+
+        /* ====================================
+           HERO
+        ===================================== */
+
+        .hero {
+
+            padding:
+                120px
+                0
+                90px;
+
+            text-align:
+                center;
+
+        }
+
+        .eyebrow {
+
+            color:
+                #8d93a2;
+
+            font-size:
+                11px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .23em;
+
+            margin-bottom:
+                25px;
+
+        }
+
+        .hero h1 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    58px,
+                    8vw,
+                    110px
+                );
+
+            line-height:
+                .90;
+
+            letter-spacing:
+                -.06em;
+
+            max-width:
+                950px;
+
+            margin:
+                0
+                auto;
+
+        }
+
+        .gradient-text {
+
+            background:
+                linear-gradient(
+                    110deg,
+                    white,
+                    #c8bcff 40%,
+                    #f0a5d0 70%,
+                    #9fe6ec
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+        }
+
+        .hero p {
+
+            max-width:
+                630px;
+
+            margin:
+                30px
+                auto
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.8;
+
+        }
+
+        /* ====================================
+           FEATURED ARTICLE
+        ===================================== */
+
+        .featured {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.2fr
+                .8fr;
+
+            gap:
+                30px;
+
+            margin-bottom:
+                100px;
+
+        }
+
+        .featured-visual {
+
+            min-height:
+                470px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            border-radius:
+                24px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                radial-gradient(
+                    circle at 70% 30%,
+                    rgba(139,92,246,.30),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 20% 70%,
+                    rgba(34,211,238,.15),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    145deg,
+                    #11121d,
+                    #08090e
+                );
+
+        }
+
+        .featured-visual::before {
+
+            content:
+                "MV";
+
+            position:
+                absolute;
+
+            font-family:
+                "Space Grotesk";
+
+            font-weight:
+                600;
+
+            font-size:
+                190px;
+
+            letter-spacing:
+                -.09em;
+
+            right:
+                30px;
+
+            bottom:
+                -20px;
+
+            color:
+                rgba(255,255,255,.04);
+
+        }
+
+        .featured-orbit {
+
+            position:
+                absolute;
+
+            width:
+                300px;
+
+            height:
+                300px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            border-radius:
+                50%;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            animation:
+                featuredOrbit
+                18s
+                linear
+                infinite;
+
+        }
+
+        .featured-orbit::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                12px;
+
+            height:
+                12px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--cyan);
+
+            box-shadow:
+                0 0 25px
+                rgba(34,211,238,.8);
+
+            right:
+                22px;
+
+            top:
+                50%;
+
+        }
+
+        @keyframes featuredOrbit {
+
+            from {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(0deg);
+
+            }
+
+            to {
+
+                transform:
+                    translate(-50%, -50%)
+                    rotate(360deg);
+
+            }
+
+        }
+
+        .featured-content {
+
+            align-self:
+                center;
+
+            padding:
+                20px;
+
+        }
+
+        .category {
+
+            color:
+                #a393ff;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .15em;
+
+            font-size:
+                10px;
+
+        }
+
+        .featured-content h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    36px,
+                    4vw,
+                    58px
+                );
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -.05em;
+
+            margin:
+                18px
+                0;
+
+        }
+
+        .featured-content p {
+
+            color:
+                #878d9b;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                25px;
+
+        }
+
+        .read-more {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            font-size:
+                13px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.25);
+
+            padding-bottom:
+                8px;
+
+        }
+
+        /* ====================================
+           BLOG GRID
+        ===================================== */
+
+        .blog-section {
+
+            padding:
+                0
+                0
+                130px;
+
+        }
+
+        .blog-header {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            gap:
+                30px;
+
+            margin-bottom:
+                45px;
+
+        }
+
+        .blog-header h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    38px,
+                    5vw,
+                    65px
+                );
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -.05em;
+
+            font-weight:
+                500;
+
+        }
+
+        .blog-header p {
+
+            color:
+                #838998;
+
+            max-width:
+                370px;
+
+            line-height:
+                1.7;
+
+            font-size:
+                13px;
+
+        }
+
+        .blog-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                16px;
+
+        }
+
+        .blog-card {
+
+            border:
+                1px solid
+                var(--line);
+
+            background:
+                rgba(255,255,255,.025);
+
+            overflow:
+                hidden;
+
+            transition:
+                .4s;
+
+        }
+
+        .blog-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(255,255,255,.18);
+
+        }
+
+        .blog-image {
+
+            height:
+                230px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #171827,
+                    #0b0c12
+                );
+
+        }
+
+        .blog-image::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                180px;
+
+            height:
+                180px;
+
+            border-radius:
+                50%;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(139,92,246,.25),
+                    transparent 70%
+                );
+
+        }
+
+        .blog-number {
+
+            position:
+                absolute;
+
+            right:
+                20px;
+
+            bottom:
+                10px;
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                80px;
+
+            font-weight:
+                600;
+
+            color:
+                rgba(255,255,255,.05);
+
+        }
+
+        .blog-body {
+
+            padding:
+                25px;
+
+        }
+
+        .blog-body h3 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                25px;
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -.03em;
+
+            margin:
+                12px
+                0;
+
+        }
+
+        .blog-body p {
+
+            color:
+                #858b9a;
+
+            line-height:
+                1.7;
+
+            font-size:
+                13px;
+
+        }
+
+        .blog-meta {
+
+            color:
+                #666d7d;
+
+            font-size:
+                10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                .13em;
+
+        }
+
+        /* ====================================
+           CTA
+        ===================================== */
+
+        .cta {
+
+            text-align:
+                center;
+
+            padding:
+                140px
+                0;
+
+            border-top:
+                1px solid
+                var(--line);
+
+        }
+
+        .cta h2 {
+
+            font-family:
+                "Space Grotesk";
+
+            font-size:
+                clamp(
+                    42px,
+                    7vw,
+                    88px
+                );
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.06em;
+
+            max-width:
+                950px;
+
+            margin:
+                0
+                auto
+                25px;
+
+        }
+
+        .cta p {
+
+            color:
+                #858b9b;
+
+            max-width:
+                590px;
+
+            line-height:
+                1.8;
+
+            margin:
+                0
+                auto
+                30px;
+
+        }
+
+        .button {
+
+            display:
+                inline-flex;
+
+            padding:
+                15px
+                22px;
+
+            background:
+                #f4f5f8;
+
+            color:
+                #08090d;
+
+            border:
+                none;
+
+            border-radius:
+                999px;
+
+            font-size:
+                13px;
+
+        }
+
+        footer {
+
+            border-top:
+                1px solid
+                var(--line);
+
+            padding:
+                30px
+                0;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            color:
+                #747a8a;
+
+            font-size:
+                12px;
+
+        }
+
+        @media (max-width: 900px) {
+
+            .featured {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .blog-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+            .blog-header {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    calc(100% - 30px);
+
+            }
+
+            nav {
+
+                height:
+                    76px;
+
+            }
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                top:
+                    76px;
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                background:
+                    rgba(6,7,11,.97);
+
+                padding:
+                    25px;
+
+                flex-direction:
+                    column;
+
+                border-bottom:
+                    1px solid
+                    var(--line);
+
+            }
+
+            .nav-links.show {
+
+                display:
+                    flex;
+
+            }
+
+            .menu {
+
+                display:
+                    block;
+
+            }
+
+            .blog-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+    </div>
+
+
+    <div class="container">
+
+
+        <nav>
+
+
+            <a
+                href="index.html"
+                class="brand"
+            >
+
+                <svg
+                    viewBox="0 0 100 100"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <defs>
+
+                        <linearGradient
+                            id="logoGradient"
+                            x1="8"
+                            y1="8"
+                            x2="92"
+                            y2="92"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#8B5CF6"
+                            />
+
+                            <stop
+                                offset="55%"
+                                stop-color="#EC4899"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#22D3EE"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+
+                    <rect
+                        x="5"
+                        y="5"
+                        width="90"
+                        height="90"
+                        rx="25"
+                        fill="#0E1018"
+                        stroke="url(#logoGradient)"
+                        stroke-width="3.5"
+                    />
+
+
+                    <path
+                        d="M21 68V33L34 49L47 33V68"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+
+                    <path
+                        d="M55 33L66 68L80 33"
+                        stroke="url(#logoGradient)"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+
+                <div>
+
+                    <strong>
+                        MV Digital Studios
+                    </strong>
+
+                    <span>
+                        Digital Growth & Creative Studio
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">
+                        Blogs
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="menu"
+                id="menu"
+            >
+                ☰
+            </button>
+
+
+        </nav>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+
+            <div class="eyebrow">
+                Ideas worth sharing
+            </div>
+
+
+            <h1>
+
+                The
+                <span class="gradient-text">
+                    thinking
+                </span>
+
+                behind
+                digital growth.
+
+            </h1>
+
+
+            <p>
+
+                Insights on SEO, social media,
+                branding, AI video, websites
+                and the changing digital landscape.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- =====================================
+             FEATURED
+        ====================================== -->
+
+        <section class="featured">
+
+
+            <div class="featured-visual">
+
+                <div class="featured-orbit"></div>
+
+            </div>
+
+
+            <div class="featured-content">
+
+                <div class="category">
+                    Featured insight
+                </div>
+
+
+                <h2>
+
+                    How modern businesses
+                    can build stronger
+                    digital visibility.
+
+                </h2>
+
+
+                <p>
+
+                    A practical look at how
+                    strategy, SEO, creative content
+                    and technology can work together
+                    instead of existing as separate
+                    marketing activities.
+
+                </p>
+
+
+                <a
+                    href="#"
+                    class="read-more"
+                >
+
+                    Read article
+
+                    ↗
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             BLOGS
+        ====================================== -->
+
+        <section class="blog-section">
+
+
+            <div class="blog-header">
+
+                <h2>
+                    Latest thinking.
+                </h2>
+
+
+                <p>
+
+                    Practical ideas and insights
+                    for businesses building
+                    their digital presence.
+
+                </p>
+
+            </div>
+
+
+            <div class="blog-grid">
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            01
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            SEO
+                        </div>
+
+
+                        <h3>
+
+                            On-Page SEO:
+                            The foundation of
+                            search visibility.
+
+                        </h3>
+
+
+                        <p>
+
+                            Understand the core
+                            elements that help
+                            search engines better
+                            understand your website.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            02
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            SOCIAL MEDIA
+                        </div>
+
+
+                        <h3>
+
+                            How to create
+                            social content
+                            people remember.
+
+                        </h3>
+
+
+                        <p>
+
+                            Move beyond random
+                            posting and develop
+                            a stronger content
+                            strategy.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            03
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            AI VIDEO
+                        </div>
+
+
+                        <h3>
+
+                            AI video creation:
+                            from idea to story.
+
+                        </h3>
+
+
+                        <p>
+
+                            Explore how AI tools can
+                            support storytelling,
+                            concept development
+                            and content production.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            04
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            WEBSITE
+                        </div>
+
+
+                        <h3>
+
+                            What makes a
+                            modern website
+                            feel premium?
+
+                        </h3>
+
+
+                        <p>
+
+                            Design, motion,
+                            hierarchy and usability
+                            all play a role in the
+                            experience.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            05
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            DIGITAL MARKETING
+                        </div>
+
+
+                        <h3>
+
+                            Why businesses need
+                            a connected digital
+                            strategy.
+
+                        </h3>
+
+
+                        <p>
+
+                            Learn why SEO,
+                            creative, social and
+                            websites work better
+                            as one system.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="blog-card">
+
+
+                    <div class="blog-image">
+
+                        <div class="blog-number">
+                            06
+                        </div>
+
+                    </div>
+
+
+                    <div class="blog-body">
+
+                        <div class="blog-meta">
+                            BRANDING
+                        </div>
+
+
+                        <h3>
+
+                            Building a brand
+                            people recognise
+                            instantly.
+
+                        </h3>
+
+
+                        <p>
+
+                            Explore the relationship
+                            between identity,
+                            consistency and
+                            memorable design.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             CTA
+        ====================================== -->
+
+        <section class="cta">
+
+
+            <div class="eyebrow">
+                Have something to build?
+            </div>
+
+
+            <h2>
+
+                Let's turn
+                the idea into
+                something real.
+
+            </h2>
+
+
+            <p>
+
+                Ready to discuss your next project?
+                Let's start a conversation.
+
+            </p>
+
+
+            <a
+                href="contact.html"
+                class="button"
+            >
+
+                Contact MV Digital Studios
+
+                ↗
+
+            </a>
+
+
+        </section>
+
+
+    </div>
+
+
+    <footer class="container">
+
+        <div>
+            © 2026 MV Digital Studios
+        </div>
+
+        <a
+            href="mailto:mvdigitalstudio6@gmail.com"
+        >
+            mvdigitalstudio6@gmail.com
+        </a>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+    <script>
+
+        const menu =
+            document.getElementById(
+                "menu"
+            );
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        menu.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+
+        const reducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+
+        if (
+            !reducedMotion
+        ) {
+
+            gsap.from(
+                ".hero > *",
+                {
+                    opacity: 0,
+                    y: 35,
+                    duration: 1,
+                    stagger: .12,
+                    ease: "power3.out"
+                }
+            );
+
+
+            gsap.from(
+                ".featured > *",
+                {
+                    opacity: 0,
+                    y: 40,
+                    duration: 1,
+                    stagger: .15,
+                    ease: "power3.out",
+                    delay: .3
+                }
+            );
+
+
+            gsap.from(
+                ".blog-card",
+                {
+                    opacity: 0,
+                    y: 35,
+                    duration: .7,
+                    stagger: .10,
+
+                    scrollTrigger: {
+                        trigger: ".blog-grid",
+                        start: "top 85%",
+                        once: true
+                    }
+                }
+            );
+
+
+            gsap.to(
+                ".grid",
+                {
+                    yPercent: 18,
+
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 1.5
+                    }
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
